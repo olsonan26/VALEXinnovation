@@ -1,35 +1,35 @@
 const views = {
   timeline: {
-    image:'./assets/screenshots/team-timeline.jpg', screen:'People & patterns', kicker:'01 / THE TEAM VIEW',
-    title:'See patterns.<br>Start a conversation.', demoTitle:'See the team in perspective.',
-    copy:'View monthly indicators across a group, compare periods and explore individual timelines. A shared view helps managers decide what to discuss next.',
-    points:['Team-wide monthly pattern graph','Individual timelines and comparison bars','Selectable months and five-year ranges'],
-    alt:'Actual VALEX-innoVAtion team timeline with monthly indicators, a company pattern graph and directional comparison bars. Fictional demo data.',
-    prompt:'“What is helping us work well together—and where could we make things easier?”'
+    image:'./assets/screenshots/team-timeline.jpg', screen:'Your team, in perspective', kicker:'01 / THE BIGGER PICTURE',
+    title:'See beyond<br>the org chart.', demoTitle:'Your people. The bigger picture.',
+    copy:'Bring your team into one view. Explore relationships and individual context without losing sight of the people behind the business.',
+    points:['A shared view for managers and HR','Team relationships alongside individual context','A starting point for your next people review'],
+    alt:'Actual software dashboard showing a company overview, individual timelines and team comparisons. Fictional demo company.',
+    prompt:'Bring more context to the decisions you make about your people.'
   },
   monthly: {
-    image:'./assets/screenshots/monthly-review.jpg', screen:'Monthly people review', kicker:'02 / THE MONTHLY REVIEW',
-    title:'Look closer.<br>Listen better.', demoTitle:'Explore the context behind a month.',
-    copy:'Choose a month, filter the model indicators and open a person’s report. Consecutive-month context helps you explore a recurring pattern before asking the employee about their experience.',
-    points:['Selectable month and indicator filters','Individual reports and consecutive-month context','Model totals with visible calculation coverage'],
-    alt:'Actual VALEX-innoVAtion monthly review showing model indicators, individual rows, month selection and report links. Fictional demo data.',
-    prompt:'“How are your priorities and workload feeling? What support would be useful right now?”'
+    image:'./assets/screenshots/monthly-review.jpg', screen:'People & support', kicker:'02 / PEOPLE WORTH INVESTING IN',
+    title:'Keep the person<br>in the picture.', demoTitle:'Make room for a better check-in.',
+    copy:'A busy workplace can leave little space for individual attention. The people review helps you prepare a focused conversation and explore where support may be useful.',
+    points:['A review focused on a person and a month','Individual context behind the company overview','A place to begin support and development discussions'],
+    alt:'Actual monthly people review with individual rows, a selected month and report links. Fictional demo company.',
+    prompt:'Give managers another starting point for conversations about support, recognition and growth.'
   },
   report: {
-    image:'./assets/screenshots/person-report.jpg', screen:'Individual descriptive report', kicker:'03 / THE INDIVIDUAL REPORT',
-    title:'More context.<br>A more open discussion.', demoTitle:'Give the person space to explain.',
-    copy:'Explore descriptive sections about work styles, personal themes and annual context. Treat the language as a set of prompts: ask what resonates, what doesn’t, and how the employee would describe themselves.',
-    points:['Descriptive sections and annual context','Year exploration and detailed reading views','Printable reports for a considered discussion'],
-    alt:'Actual VALEX-innoVAtion report displaying initial impression and how others see the person. Fictional demo sample; interpretations are discussion prompts.',
-    prompt:'“Which of these themes feels familiar? How would you describe the way you work best?”'
+    image:'./assets/screenshots/person-report.jpg', screen:'Individual insight', kicker:'03 / THE PERSON BEHIND THE ROLE',
+    title:'The job title<br>is just the start.', demoTitle:'See the individual behind the role.',
+    copy:'Explore individual reports and bring more context to coaching and working relationships. Invite the person to share what fits their experience and what they would describe differently.',
+    points:['Individual reports to explore with your people','More context for coaching and collaboration','Printable views for a focused discussion'],
+    alt:'Actual individual report with descriptive sections. Fictional demo person.',
+    prompt:'Build a conversation around the person, not just their position in the company.'
   },
   workspace: {
-    image:'./assets/screenshots/workspace.jpg', screen:'Company workspace overview', kicker:'04 / THE COMPANY WORKSPACE',
-    title:'Bring the people<br>and the process together.', demoTitle:'Keep the bigger picture organised.',
-    copy:'Organise your people, applicants and jobs within a company workspace. Move from an overview into a team comparison, an applicant discussion or an individual profile.',
-    points:['Separate staff, applicant and job views','Client selection and company organisation','Clear navigation into individual records'],
-    alt:'Actual VALEX-innoVAtion workspace showing fictional company staff and applicant totals, jobs and navigation. Demo records only.',
-    prompt:'“What should a new colleague know about our team—and how will we support their first weeks?”'
+    image:'./assets/screenshots/workspace.jpg', screen:'Hiring & teams', kicker:'04 / THE TEAM YOU ARE BUILDING',
+    title:'Your next hire.<br>Your whole team.', demoTitle:'Bring hiring into the company picture.',
+    copy:'Keep staff, applicants and jobs organised in a company workspace. Consider working relationships as you prepare interviews and plan a new colleague’s first weeks.',
+    points:['Staff, applicants and jobs in one workspace','Team context alongside applicant discussions','A clearer starting point for onboarding plans'],
+    alt:'Actual company workspace showing staff, applicant and job views. Fictional company records.',
+    prompt:'Add team context to skills, experience and the requirements of the role.'
   }
 };
 const order=Object.keys(views);
@@ -58,6 +58,8 @@ for(const tab of tabs){
   });
 }
 
+for(const link of document.querySelectorAll('[data-select-view]'))link.addEventListener('click',()=>selectView(link.dataset.selectView));
+
 const nav=byId('main-nav'),menu=document.querySelector('.menu-toggle');
 function closeMenu(){nav.classList.remove('is-open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation');}
 menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';nav.classList.toggle('is-open',open);menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Close navigation':'Open navigation');});
@@ -74,13 +76,13 @@ function updateDemo(){
   byId('demo-image').src=view.image;byId('demo-image').alt=view.alt;
   byId('demo-prompt').textContent=view.prompt;fillList(byId('demo-points'),view.points);
   byId('demo-back').disabled=demoIndex===0;
-  byId('demo-next').innerHTML=demoIndex===order.length-1?'Finish demo <span aria-hidden="true">✓</span>':'Next view <span aria-hidden="true">→</span>';
+  byId('demo-next').innerHTML=demoIndex===order.length-1?'Try your connection <span aria-hidden="true">↗</span>':'Next view <span aria-hidden="true">→</span>';
   for(const dot of document.querySelectorAll('[data-demo-step]')){if(Number(dot.dataset.demoStep)===demoIndex)dot.setAttribute('aria-current','step');else dot.removeAttribute('aria-current');}
   demo.scrollTop=0;
 }
-function openDemo(opener){demoOpener=opener;demoIndex=order.indexOf(selectedView);updateDemo();closeMenu();demo.showModal();document.body.classList.add('modal-open');}
+function openDemo(opener){demoOpener=opener;demoIndex=0;updateDemo();closeMenu();demo.showModal();document.body.classList.add('modal-open');}
 for(const button of document.querySelectorAll('[data-demo]'))button.addEventListener('click',()=>openDemo(button));
-byId('demo-next').addEventListener('click',()=>{if(demoIndex===order.length-1)demo.close();else{demoIndex++;updateDemo();}});
+byId('demo-next').addEventListener('click',()=>{if(demoIndex===order.length-1){demoOpener=byId('a-name');demo.close();byId('try-it').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});byId('a-name').focus({preventScroll:true});}else{demoIndex++;updateDemo();}});
 byId('demo-back').addEventListener('click',()=>{if(demoIndex>0){demoIndex--;updateDemo();}});
 for(const button of document.querySelectorAll('[data-demo-step]'))button.addEventListener('click',()=>{demoIndex=Number(button.dataset.demoStep);updateDemo();});
 document.querySelector('[data-close-demo]').addEventListener('click',()=>demo.close());

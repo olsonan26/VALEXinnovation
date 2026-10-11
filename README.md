@@ -13,8 +13,8 @@ To publish independently, create a separate deployment project with **Root Direc
 - Ivory, forest, lime, warm peach and muted lavender; editorial serif accents paired with system sans-serif text.
 - A projected 3D sphere with orbit rings, perspective screenshot layers, pointer tilt and restrained section reveals. Animation stops when hidden and respects reduced-motion preferences.
 - Four-view product gallery, keyboard-operated tabs, screenshot enlargement, a four-step guided demo, mobile navigation and native expandable FAQs.
-- A visual A-to-B / B-to-A explanation and real **Try it with someone** form. Full birth names, optional everyday names and birthdates produce separate overall, full-name and everyday-name model comparisons from each person's perspective. Fictional examples are available. Edited or cleared inputs immediately invalidate previous results.
-- “Explore the demo” opens the four-step screenshot walkthrough. **Try it with someone** opens the real calculation section. Neither needs an account or a live software connection. No booking service is implied.
+- A business-focused journey from the people problem to the product, a free two-person experience, and a company preview. The trial presents one comparison from each person’s perspective; calculation components and methodology are not part of the sales presentation. Fictional examples are available, and edited or cleared inputs immediately invalidate previous results.
+- **Try your team connection** is the primary invitation. Results lead to **Explore VALEX for your company**. **Explore the company demo** opens a four-view screenshot tour that returns visitors to the personal trial. The current offer is this on-site preview; a personalised consultation, booking destination, and company pilot require separate arrangements.
 
 ## Standalone model and data handling
 
@@ -34,7 +34,7 @@ Screenshot filenames: `team-timeline.jpg`, `monthly-review.jpg`, `person-report.
 
 ## Copy and evidence
 
-The marketing language focuses on interpretation, employee listening, collaboration, hiring discussions and onboarding. It does not claim validated psychometrics, measured stress, mental-health diagnosis, predictive hiring, guaranteed retention, cloud accounts or production security capabilities. The FAQ explains the current software demo's browser-local storage and the separate work required for company rollout.
+The marketing language focuses on the employer’s people investment, team relationships, retention conversations, hiring context and onboarding. The visitor sees benefits and the product experience rather than explanations of the calculation. It does not claim validated psychometrics, measured stress, mental-health diagnosis, predictive hiring, guaranteed retention, cloud accounts or production security capabilities. The FAQ explains the current software demo's browser-local storage and the separate work required for company rollout.
 
 Conversation-practice references, checked for this website:
 
@@ -47,3 +47,9 @@ These sources inform the recommended use practices and do not validate VALEX-inn
 ## Repository contents
 
 The runnable website is at the repository root. docs/ contains design screenshots, model provenance, and the original development handoff. The archived capture fixture in docs/screenshot-capture/ documents how screenshots were produced; its imports require the original Staff Profiler source tree and it is not part of this website's runtime or tests.
+
+## Sales presentation rebuild
+
+See `docs/sales-journey-handoff.md` for the updated conversion journey and verification. The supplied business document informed the investment, retention, team connection, hiring and start-small messages. Hook, story, offer and a progression from a small experience to a company preview informed the page structure. No endorsement by Russell Brunson is implied.
+
+This presentation does not conceal the implementation: the standalone calculation modules remain downloadable browser code, and this source repository is public. Genuine proprietary-code protection would require a separate server-backed architecture. The rebuild changes the sales experience while preserving the approved arithmetic and the existing static Vercel deployment.

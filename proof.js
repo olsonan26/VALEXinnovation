@@ -11,14 +11,14 @@ function directionCard(from,to,values,letter){
   const header=document.createElement('div');header.className='direction-heading';
   const avatar=document.createElement('span');avatar.className='explainer-avatar'+(letter==='B'?' second':'');avatar.textContent=letter;
   const heading=document.createElement('div');const h4=document.createElement('h4');h4.textContent=from+'’s perspective';const caption=document.createElement('p');caption.textContent='Compared with '+to;heading.append(h4,caption);header.append(avatar,heading);article.append(header);
-  const total=document.createElement('div');total.className='overall-score';const label=document.createElement('span');label.textContent='Overall model comparison';const number=document.createElement('strong');number.textContent=percent(values.overall);total.append(label,number);article.append(total);
-  for(const [key,labelText] of [['whole','Full name comparison'],['called','Everyday name comparison']]){
-    const row=document.createElement('div');row.className='proof-score';
-    const labels=document.createElement('div');const label=document.createElement('span');label.textContent=labelText;const value=document.createElement('strong');value.textContent=percent(values[key]);labels.append(label,value);
-    const track=document.createElement('div');track.className='proof-track '+key;
-    if(values[key]!==null){track.setAttribute('role','meter');track.setAttribute('aria-label',from+' to '+to+': '+labelText);track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax','100');track.setAttribute('aria-valuenow',String(values[key]));const fill=document.createElement('i');fill.style.width=values[key]+'%';track.append(fill);}
-    row.append(labels,track);article.append(row);
+  const total=document.createElement('div');total.className='overall-score';const label=document.createElement('span');label.textContent='Connection comparison';const number=document.createElement('strong');number.textContent=percent(values.overall);total.append(label,number);article.append(total);
+  const track=document.createElement('div');track.className='proof-track connection-score';
+  if(values.overall!==null){
+    track.setAttribute('role','meter');track.setAttribute('aria-label',from+' with '+to+': connection comparison');
+    track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax','100');track.setAttribute('aria-valuenow',String(values.overall));
+    const fill=document.createElement('i');fill.style.width=values.overall+'%';track.append(fill);
   }
+  article.append(track);
   return article;
 }
 form.addEventListener('input',clearResult);
