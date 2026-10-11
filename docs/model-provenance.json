@@ -1,0 +1,16 @@
+{
+  "sourceRepository": "https://github.com/olsonan26/STAFFprofiler",
+  "sourceCommit": "79ea7e1e0d422e9a8f00c23c4d6eb2075d7a92a1",
+  "files": [
+    {
+      "path": "lib/compatibility.js",
+      "originalPath": "compatibility.js",
+      "sha256": "5a5c0a92ea3f687111fc3008ced0ba0f9af9cb0cb82480646284798f2d41b3e0"
+    },
+    {
+      "path": "lib/assets/chart-engine.js",
+      "originalPath": "assets/chart-engine.js",
+      "sha256": "bb79462179bdd96804c733d46e2bc9b87390196f3f7aaa3af677105c255864f6"
+    }
+  ]
+}
