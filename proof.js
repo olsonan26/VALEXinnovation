@@ -39,5 +39,6 @@ byId('load-example').addEventListener('click',()=>{
 });
 byId('clear-pair').addEventListener('click',()=>{form.reset();clearResult();byId('a-name').focus({preventScroll:true});});
 // Clear browser-restored form values as well as fresh reloads and history returns.
-addEventListener('pageshow',()=>{form.reset();clearResult();});
+addEventListener('pageshow',e=>{if(e.persisted){form.reset();clearResult();}});
+addEventListener('pagehide',()=>{form.reset();clearResult();});
 submit.disabled=false;

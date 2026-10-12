@@ -1,55 +1,37 @@
-# VALEX-innoVAtion marketing website
+# VALEX Innovations
 
-A standalone marketing site for the new **VALEX-innoVAtion** brand, separate from the current Staff Profiler application. Its own page, assets, preview, build and deployment configuration live here. It does not import modules from the running app, share storage, connect to the software or send employee information anywhere. A self-contained copy of the calculation model powers the two-person proof of concept. The existing app entrypoint, routes and build remain unchanged.
+A standalone, static enterprise marketing and educational site. It contains no connection to the operational HR software or company records.
 
-## Preview and build
+## Run and build
 
-From this directory, run `npm start` and open http://127.0.0.1:4190/. Run `npm run check`, `npm test` and `npm run build` to validate and generate `dist`; `npm run preview` serves that output. There are no package dependencies, external fonts, trackers or runtime requests to third-party services. All twelve published files come from this directory; it is independently portable.
+Use Node 22 or later. Install with `npm ci`. `npm run dev` builds and serves the site at http://127.0.0.1:4190/. `npm run build` generates `dist`; `npm run preview` serves an existing build. `npm run check` checks client/build syntax and `npm test` runs model, route and asset tests.
 
-To publish independently, create a separate deployment project with **Root Directory = .**, framework **Other**, build `npm run build`, output `dist`. This repository is dedicated to the website. Connecting a hosting project and public domain is separate from publishing its source to GitHub.
+Vercel configuration uses `npm ci`, `npm run build`, and the `dist` output directory. Main is connected to production; approved merges publish the site automatically. Static hosting serves the generated directory routes with trailing slashes. No environment variables or hosted database are needed.
 
-## Design and interactions
+## Pages and experiences
 
-- Ivory, forest, lime, warm peach and muted lavender; editorial serif accents paired with system sans-serif text.
-- A projected 3D sphere with orbit rings, perspective screenshot layers, pointer tilt and restrained section reveals. Animation stops when hidden and respects reduced-motion preferences.
-- Four-view product gallery, keyboard-operated tabs, screenshot enlargement, a four-step guided demo, mobile navigation and native expandable FAQs.
-- A business-focused journey from the people problem to the product, a free two-person experience, and a company preview. The trial presents one comparison from each person’s perspective; calculation components and methodology are not part of the sales presentation. Fictional examples are available, and edited or cleared inputs immediately invalidate previous results.
-- **Try your team connection** is the primary invitation. Results lead to **Explore VALEX for your company**. **Explore the company demo** opens a four-view screenshot tour that returns visitors to the personal trial. The current offer is this on-site preview; a personalised consultation, booking destination, and company pilot require separate arrangements.
+Home, Platform, How It Works, Science, Organizations, Explorer, About, Contact, historical archive and anatomy provenance. The generated documents come from `content/pages.mjs`; `content/research.mjs` owns the study catalogue.
 
-## Standalone model and data handling
+The anatomical experience uses Three.js/OrbitControls and 47 real BodyParts3D meshes. It includes region selection, rotation, zoom, conceptual paths, pause/tour controls and a static view. It is educational, not a neurological measurement. Atlas attribution and adaptations are in `assets/anatomy/attribution.txt` and `docs/anatomy-provenance.json`. The local fictional spoken-name audio has native playback controls and an amplitude waveform.
 
-`lib/compatibility.js` and `lib/assets/chart-engine.js` are byte-for-byte copies of the current software's approved comparison module and compiled preserved arithmetic. `demo-model.js` validates inputs and calls those functions without changing the matrix, coefficients, weights or arithmetic. `proof.js` renders the result with DOM text nodes, without interpreting scores as psychological traits or employment conclusions. Unavailable model terms remain unavailable.
+The personal explorer asks for first and last name, then either current age or full birthday. Birthday derives age and adds current-calendar-year PY/PYE. Optional middle/everyday names enable separate identity layers. Canonical letter-duration helpers are exported in `lib/name-engine.js`; its calculation body is verified against the original `lib/assets/chart-engine.js`. PY uses `.py`; PYE uses `.ess`. No fabricated birthdate is used in age mode.
 
-The page uses no fetch, analytics, form transmission, cookies, local storage or session storage. Inputs exist only in the current document. Reloading or Clear details removes them. The preview and deployment policies forbid connections and form submission. Use another person's information only with permission.
+The original two-person comparison remains in `demo-model.js`/`proof.js`. `lib/compatibility.js` and `lib/assets/chart-engine.js` retain their pinned original hashes in `docs/model-provenance.json`. Model scores are interpretations, not probabilities or employment recommendations. The supported alphabet is A–Z; unsupported characters produce a clear error rather than an invented transliteration.
 
-`npm test` checks pinned canonical file hashes and known sample scores, parity with the bundled approved model in both directions, swapped perspectives, optional-name fallback, nonmutation, invalid/incomplete/future dates, unsupported names and markup, unavailable terms and bounded scores. `docs/model-provenance.json` records the original repository, source revision, and SHA-256 hashes. If upstream calculation code changes, update both standalone copies deliberately and rerun the parity checks. The site requires names using A–Z letters, spaces or hyphens, matching the preserved engine's supported alphabet.
+## Privacy and contact
+
+Personal and comparison entries remain in document memory. There is no application storage, analytics, account, survey upload or personal-data endpoint. Page exit/history return and Clear remove the entries. Local asset fetches load anatomy and waveform data only. Form submission to servers is blocked by the Content Security Policy.
+
+The contact form prepares a local request for Valexinnovations@gmail.com. The visitor can review it, download it, or open an email-app draft and choose Send there. Preparing the request does not send an email. Browser/email-app behavior is outside this site's control.
+
+## Evidence and verification
+
+Research is separated into independent findings, proprietary interpretations and proposed evaluation. Circadian controls show time windows, not physiological predictions. Historical 23/28/33-day cycles are explicitly unsupported mathematics. See `docs/research-audit.md`, `docs/skills-applied.md`, `docs/rebuild-decisions.md`, `docs/motion-review.md` and `docs/qa/rebuild-verification.md` for scope and actual checks.
 
 ## Screenshot provenance
 
 The four JPEGs under `assets/screenshots/` were captured on 10 October 2026 from the repository's real production components through `tests/fixtures/marketing-capture.html` in the original Staff Profiler repository. The fixture installs fictional sample records in an in-memory database and uses `createWorkspace` and `createChartWorkspace`; it does not read, mutate or persist company records. It is excluded from the software's production build and the marketing build.
 
-The demo company is Northstar Studio; all people and birthdates are fictional. The captured views are the team timeline, selected-month review, individual report text and workspace overview. These are actual rendered screens, not recreated interface mockups. The report screenshot is a scrolled view of its descriptive sections. No report content, scoring or other production component was modified for the screenshot. The screenshots retain the current software's Staff Profiler branding; the site identifies them as the existing interface transitioning to VALEX-innoVAtion. Rebranding the actual application is a separate change.
+The demo company is Northstar Studio; all people and birthdates are fictional. The captured views are the team timeline, selected-month review, individual report text and workspace overview. These are actual rendered screens, not recreated interface mockups. The report screenshot is a scrolled view of its descriptive sections. No report content, scoring or other production component was modified for the screenshot. The screenshots retain the current software's Staff Profiler branding; the site identifies them as the existing interface transitioning to VALEX Innovations. Rebranding the actual application is a separate change.
 
 Screenshot filenames: `team-timeline.jpg`, `monthly-review.jpg`, `person-report.jpg`, `workspace.jpg`.
-
-## Copy and evidence
-
-The marketing language focuses on the employer’s people investment, team relationships, retention conversations, hiring context and onboarding. The visitor sees benefits and the product experience rather than explanations of the calculation. It does not claim validated psychometrics, measured stress, mental-health diagnosis, predictive hiring, guaranteed retention, cloud accounts or production security capabilities. The FAQ explains the current software demo's browser-local storage and the separate work required for company rollout.
-
-Conversation-practice references, checked for this website:
-
-- [Gallup: A Great Manager's Most Important Habit](https://www.gallup.com/workplace/505370/great-manager-important-habit.aspx) — meaningful feedback and manager conversations.
-- [Google re:Work: Understand team effectiveness](https://rework.withgoogle.com/intl/en/guides/understand-team-effectiveness) — psychological safety and speaking up in teams.
-- [US Office of Personnel Management: Structured Interviews](https://www.opm.gov/policy-data-oversight/assessment-and-selection/structured-interviews/) — consistent assessment of job-related competencies.
-
-These sources inform the recommended use practices and do not validate VALEX-innoVAtion's calculations. The website states this distinction explicitly. No unsupported customer logos, testimonials, pricing, outcome statistics or certifications are included.
-
-## Repository contents
-
-The runnable website is at the repository root. docs/ contains design screenshots, model provenance, and the original development handoff. The archived capture fixture in docs/screenshot-capture/ documents how screenshots were produced; its imports require the original Staff Profiler source tree and it is not part of this website's runtime or tests.
-
-## Sales presentation rebuild
-
-See `docs/sales-journey-handoff.md` for the updated conversion journey and verification. The supplied business document informed the investment, retention, team connection, hiring and start-small messages. Hook, story, offer and a progression from a small experience to a company preview informed the page structure. No endorsement by Russell Brunson is implied.
-
-This presentation does not conceal the implementation: the standalone calculation modules remain downloadable browser code, and this source repository is public. Genuine proprietary-code protection would require a separate server-backed architecture. The rebuild changes the sales experience while preserving the approved arithmetic and the existing static Vercel deployment.
