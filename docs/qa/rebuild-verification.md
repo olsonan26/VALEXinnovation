@@ -29,3 +29,11 @@ The revised homepage leads with the company proposition and real product showcas
 The light page interactions are bundled into the deferred shared entry. The 3D module remains lazy. This avoids a first-click race while downloading individual modules. The 3D model draws its first frame before removing the static fallback. Region leader lines use the current scene dimensions.
 
 The source conversation was reviewed as company-provided material. Practical themes were incorporated; accuracy figures and endorsements were not treated as verified evidence. Dedicated science content remains available for interested visitors. `refined-home.jpg` records the updated local render.
+
+## Production verification
+
+GitHub PR #1 merged the complete rebuild; PR #2 merged the company-conversation refinement. The refinement merge is `c22c9f4955f6cc64407261ad7ec986a8268a4f75`. GitHub's Vercel status reports Deployment has completed for that commit, with a Production deployment attached.
+
+At https://vale-xinnovation.vercel.app/ the refined title and company copy were present; the three rejected phrases were absent; the analyser appeared after the platform and company demonstration. The anatomical view rendered and its visible pause/play control worked. Live age-only and birthday inputs produced the expected preview; birthday provided current-year PY/PYE. The revised How It Works page and real screenshot enlargement worked. No website console errors observed. `refined-live-home.jpg` records the public render.
+
+Production is published with the user's explicit authorisation. Real-device and complete accessibility limitations above still apply.
