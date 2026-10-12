@@ -3,13 +3,23 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "engines": {"node": ">=22"},
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
-    "dev": "node server.mjs",
-    "start": "node server.mjs",
+    "dev": "npm run build && node server.mjs --production",
+    "start": "npm run build && node server.mjs --production",
     "preview": "node server.mjs --production",
-    "check": "node --check site.js && node --check proof.js && node --check demo-model.js && node --check build.mjs && node --check server.mjs",
+    "check": "node --check site.js && node --check personal-ui.js && node --check science-ui.js && node --check brain-scene.js && node --check product.js && node --check personal-model.js && node --check build.mjs && node --check server.mjs",
     "test": "node --test tests/*.test.mjs",
     "build": "node build.mjs"
+  },
+  "dependencies": {
+    "@fontsource/instrument-serif": "5.3.0",
+    "@fontsource/manrope": "5.3.0",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
   }
 }

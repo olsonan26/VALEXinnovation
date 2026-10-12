@@ -1,0 +1,18 @@
+          <form id="pair-form" autocomplete="off" method="post" action="#try-it">
+            <div class="profile-inputs">
+              <fieldset><legend><span>A</span> About you</legend><label for="a-name">Full birth name <span>Required</span></label><input id="a-name" name="a-name" type="text" placeholder="e.g. Amelia Rose Morgan" required minlength="2" maxlength="100" aria-describedby="name-format" autocomplete="off"><label for="a-called">Name you use day to day <span>Optional</span></label><input id="a-called" name="a-called" type="text" placeholder="e.g. Amelia Morgan" maxlength="100" autocomplete="off"><label for="a-dob">Birthdate <span>Required</span></label><input id="a-dob" name="a-dob" type="date" required min="1000-01-01" autocomplete="off"></fieldset>
+              <fieldset><legend><span>B</span> About the other person</legend><label for="b-name">Full birth name <span>Required</span></label><input id="b-name" name="b-name" type="text" placeholder="e.g. Oliver James Lewis" required minlength="2" maxlength="100" aria-describedby="name-format" autocomplete="off"><label for="b-called">Name they use day to day <span>Optional</span></label><input id="b-called" name="b-called" type="text" placeholder="e.g. Oliver Lewis" maxlength="100" autocomplete="off"><label for="b-dob">Birthdate <span>Required</span></label><input id="b-dob" name="b-dob" type="date" required min="1000-01-01" autocomplete="off"></fieldset>
+            </div>
+            <p id="name-format" class="input-help">Enter names using A–Z letters, spaces or hyphens. Everyday names are optional.</p>
+            <div class="proof-actions"><p><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>Your details stay in this browser. Nothing sent or saved.<br>Use someone else’s details only with their permission.</span></p><div><button type="button" class="text-link" id="clear-pair">Clear details</button><button type="submit" class="button button-dark" id="calculate-pair" disabled>Reveal our connection <span aria-hidden="true">↗</span></button></div></div>
+            <noscript><p class="proof-error">Enable JavaScript to use the local comparison, or explore the software screenshots above.</p></noscript>
+            <p class="proof-error" id="pair-error" role="alert" hidden></p>
+          </form>
+
+        <section id="pair-results" class="pair-results" aria-labelledby="pair-results-title" tabindex="-1" hidden>
+          <div class="results-intro"><div><p class="eyebrow">YOUR CONNECTION, IN PERSPECTIVE</p><h3 id="pair-results-title">One connection. Two perspectives.</h3></div><span class="result-badge">Your personalised preview</span></div>
+          <div class="direction-results" id="direction-results"></div>
+          <p class="comparison-context">Each person's perspective can differ. These are comparison scores, not probabilities of success or a hiring recommendation.</p>
+          <div class="result-conversation"><p class="eyebrow">NOW PICTURE YOUR WHOLE TEAM</p><h4>One connection is only the beginning.</h4><p>Explore your people, applicants and working relationships in a company workspace. See where this experience could fit into your business.</p><a class="button button-dark" href="/contact/">Explore VALEX for your company <span aria-hidden="true">↗</span></a></div>
+          <p class="result-freshness">Editing a profile clears the result. Your details are not saved.</p>
+        </section>

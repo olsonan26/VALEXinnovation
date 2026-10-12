@@ -1,0 +1,343 @@
+{
+  "source": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+  "license": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+  "adaptations": [
+    "FMA selection",
+    "head/neck skin crop",
+    "coordinate conversion",
+    "material and lighting changes",
+    "rendered JPEG fallback"
+  ],
+  "meshes": [
+    {
+      "id": "FJ2810",
+      "fma": "FMA7163",
+      "label": "skin",
+      "category": "head",
+      "crc32": "c7d79905"
+    },
+    {
+      "id": "FJ1753",
+      "fma": "FMA61841",
+      "label": "amygdala",
+      "category": "amygdala",
+      "crc32": "fe1363c5"
+    },
+    {
+      "id": "FJ1829",
+      "fma": "FMA61841",
+      "label": "amygdala",
+      "category": "amygdala",
+      "crc32": "5d6db412"
+    },
+    {
+      "id": "FJ1833",
+      "fma": "FMA61857",
+      "label": "superior frontal gyrus",
+      "category": "frontal",
+      "crc32": "742006c7"
+    },
+    {
+      "id": "FJ1834",
+      "fma": "FMA61857",
+      "label": "superior frontal gyrus",
+      "category": "frontal",
+      "crc32": "bbef162b"
+    },
+    {
+      "id": "FJ1787",
+      "fma": "FMA61859",
+      "label": "middle frontal gyrus",
+      "category": "frontal",
+      "crc32": "04fc0a21"
+    },
+    {
+      "id": "FJ1788",
+      "fma": "FMA61859",
+      "label": "middle frontal gyrus",
+      "category": "frontal",
+      "crc32": "8515610e"
+    },
+    {
+      "id": "FJ1744",
+      "fma": "FMA61860",
+      "label": "inferior frontal gyrus",
+      "category": "frontal",
+      "crc32": "8ca2e6aa"
+    },
+    {
+      "id": "FJ1745",
+      "fma": "FMA61860",
+      "label": "inferior frontal gyrus",
+      "category": "frontal",
+      "crc32": "c3432979"
+    },
+    {
+      "id": "FJ1800",
+      "fma": "FMA61894",
+      "label": "precentral gyrus",
+      "category": "cortex",
+      "crc32": "707ae91d"
+    },
+    {
+      "id": "FJ1801",
+      "fma": "FMA61894",
+      "label": "precentral gyrus",
+      "category": "cortex",
+      "crc32": "925f8cda"
+    },
+    {
+      "id": "FJ1797",
+      "fma": "FMA61896",
+      "label": "postcentral gyrus",
+      "category": "cortex",
+      "crc32": "40ae3adf"
+    },
+    {
+      "id": "FJ1798",
+      "fma": "FMA61896",
+      "label": "postcentral gyrus",
+      "category": "cortex",
+      "crc32": "b8cd78ff"
+    },
+    {
+      "id": "FJ1841",
+      "fma": "FMA61897",
+      "label": "supramarginal gyrus",
+      "category": "cortex",
+      "crc32": "a77affd5"
+    },
+    {
+      "id": "FJ1842",
+      "fma": "FMA61897",
+      "label": "supramarginal gyrus",
+      "category": "cortex",
+      "crc32": "c096df8c"
+    },
+    {
+      "id": "FJ1732",
+      "fma": "FMA61898",
+      "label": "angular gyrus",
+      "category": "cortex",
+      "crc32": "32c0a84f"
+    },
+    {
+      "id": "FJ1733",
+      "fma": "FMA61898",
+      "label": "angular gyrus",
+      "category": "cortex",
+      "crc32": "b44c8b1e"
+    },
+    {
+      "id": "FJ1835",
+      "fma": "FMA61899",
+      "label": "superior parietal lobule",
+      "category": "cortex",
+      "crc32": "56162d99"
+    },
+    {
+      "id": "FJ1836",
+      "fma": "FMA61899",
+      "label": "superior parietal lobule",
+      "category": "cortex",
+      "crc32": "da261187"
+    },
+    {
+      "id": "FJ1789",
+      "fma": "FMA61906",
+      "label": "middle temporal gyrus",
+      "category": "cortex",
+      "crc32": "b69c4cab"
+    },
+    {
+      "id": "FJ1790",
+      "fma": "FMA61906",
+      "label": "middle temporal gyrus",
+      "category": "cortex",
+      "crc32": "a12c3888"
+    },
+    {
+      "id": "FJ1746",
+      "fma": "FMA61907",
+      "label": "inferior temporal gyrus",
+      "category": "cortex",
+      "crc32": "26195051"
+    },
+    {
+      "id": "FJ1747",
+      "fma": "FMA61907",
+      "label": "inferior temporal gyrus",
+      "category": "cortex",
+      "crc32": "f6920609"
+    },
+    {
+      "id": "FJ1783",
+      "fma": "FMA61908",
+      "label": "fusiform gyrus",
+      "category": "cortex",
+      "crc32": "b9636324"
+    },
+    {
+      "id": "FJ1784",
+      "fma": "FMA61908",
+      "label": "fusiform gyrus",
+      "category": "cortex",
+      "crc32": "69cec1b4"
+    },
+    {
+      "id": "FJ1785",
+      "fma": "FMA61918",
+      "label": "parahippocampal gyrus",
+      "category": "cortex",
+      "crc32": "3fde9911"
+    },
+    {
+      "id": "FJ1786",
+      "fma": "FMA61918",
+      "label": "parahippocampal gyrus",
+      "category": "cortex",
+      "crc32": "488ba816"
+    },
+    {
+      "id": "FJ1770",
+      "fma": "FMA61993",
+      "label": "midbrain",
+      "category": "brainstem",
+      "crc32": "1fa819e3"
+    },
+    {
+      "id": "FJ1817",
+      "fma": "FMA61993",
+      "label": "midbrain",
+      "category": "brainstem",
+      "crc32": "3c8de195"
+    },
+    {
+      "id": "FJ1769",
+      "fma": "FMA62004",
+      "label": "medulla oblongata",
+      "category": "brainstem",
+      "crc32": "dda926e7"
+    },
+    {
+      "id": "FJ1831",
+      "fma": "FMA62004",
+      "label": "medulla oblongata",
+      "category": "brainstem",
+      "crc32": "4aef6f8a"
+    },
+    {
+      "id": "FJ1782",
+      "fma": "FMA62007",
+      "label": "thalamus",
+      "category": "deep",
+      "crc32": "a5d72e56"
+    },
+    {
+      "id": "FJ1827",
+      "fma": "FMA62007",
+      "label": "thalamus",
+      "category": "deep",
+      "crc32": "f1819bbf"
+    },
+    {
+      "id": "FJ1760",
+      "fma": "FMA62008",
+      "label": "hypothalamus",
+      "category": "deep",
+      "crc32": "6b2307fd"
+    },
+    {
+      "id": "FJ1808",
+      "fma": "FMA62008",
+      "label": "hypothalamus",
+      "category": "deep",
+      "crc32": "34dbc808"
+    },
+    {
+      "id": "FJ1739",
+      "fma": "FMA62434",
+      "label": "cingulate gyrus",
+      "category": "self",
+      "crc32": "bcba884a"
+    },
+    {
+      "id": "FJ1740",
+      "fma": "FMA62434",
+      "label": "cingulate gyrus",
+      "category": "self",
+      "crc32": "382168ca"
+    },
+    {
+      "id": "FJ1759",
+      "fma": "FMA62493",
+      "label": "hippocampus",
+      "category": "hippocampus",
+      "crc32": "b77e5683"
+    },
+    {
+      "id": "FJ1807",
+      "fma": "FMA62493",
+      "label": "hippocampus",
+      "category": "hippocampus",
+      "crc32": "7624c65a"
+    },
+    {
+      "id": "FJ1791",
+      "fma": "FMA67325",
+      "label": "occipital lobe",
+      "category": "cortex",
+      "crc32": "2a22f6f8"
+    },
+    {
+      "id": "FJ1792",
+      "fma": "FMA67325",
+      "label": "occipital lobe",
+      "category": "cortex",
+      "crc32": "c26134e7"
+    },
+    {
+      "id": "FJ1781",
+      "fma": "FMA67944",
+      "label": "cerebellum",
+      "category": "cerebellum",
+      "crc32": "75054fe4"
+    },
+    {
+      "id": "FJ1830",
+      "fma": "FMA67944",
+      "label": "cerebellum",
+      "category": "cerebellum",
+      "crc32": "4be9e58b"
+    },
+    {
+      "id": "FJ1837",
+      "fma": "FMA70701",
+      "label": "anterior part of superior temporal gyrus",
+      "category": "auditory",
+      "crc32": "ed997724"
+    },
+    {
+      "id": "FJ1838",
+      "fma": "FMA70701",
+      "label": "anterior part of superior temporal gyrus",
+      "category": "auditory",
+      "crc32": "c1e2e108"
+    },
+    {
+      "id": "FJ1839",
+      "fma": "FMA70703",
+      "label": "posterior part of superior temporal gyrus",
+      "category": "auditory",
+      "crc32": "8a03cae5"
+    },
+    {
+      "id": "FJ1840",
+      "fma": "FMA70703",
+      "label": "posterior part of superior temporal gyrus",
+      "category": "auditory",
+      "crc32": "18116574"
+    }
+  ],
+  "sha256": "929873135d134843a8db27d2dfc8a08e0b4927cb49bc803841fd381b315eebb8"
+}

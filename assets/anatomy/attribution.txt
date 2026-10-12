@@ -1,0 +1,5 @@
+BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International.
+https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+https://creativecommons.org/licenses/by/4.0/
+Source: isa_BP3D_4.0_obj_99.zip. Adaptations: FMA mesh selection, head/neck crop, centred geometry, coordinate conversion, rounded coordinates, materials, lighting, SVG projection and rendered JPEG fallback. Functional territories and paths are approximate explanatory illustrations, not scans or tractography.
+Spoken-name sample: locally generated fictional Amelia via Windows System.Speech; no personal input sent to a speech service.
