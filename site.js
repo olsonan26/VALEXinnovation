@@ -2,6 +2,7 @@ import './personal-ui.js';
 import './proof.js';
 import './product.js';
 import './science-ui.js';
+import './signal-experience.js';
 const el=id=>document.getElementById(id);
 const menu=document.querySelector('.menu-toggle'),nav=el('main-nav');
 function closeMenu(){menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation');nav.classList.remove('open');}
