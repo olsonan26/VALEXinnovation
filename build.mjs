@@ -15,6 +15,7 @@ for(const [family,files] of Object.entries({'manrope':['manrope-latin-400-normal
  for(const file of files)await fs.copyFile(path.join(root,'node_modules/@fontsource',family,'files',file),path.join(output,'assets/fonts',file));
  await fs.copyFile(path.join(root,'node_modules/@fontsource',family,'LICENSE'),path.join(output,'assets/fonts',family+'-LICENSE.txt'));
 }
+await build({entryPoints:[path.join(root,'site.js')],outfile:path.join(output,'site.js'),bundle:true,minify:true,format:'esm',target:['es2022'],external:['./brain-scene.js'],legalComments:'eof'});
 await build({entryPoints:[path.join(root,'brain-scene.js')],outfile:path.join(output,'brain-scene.js'),bundle:true,minify:true,format:'esm',target:['es2022'],legalComments:'eof'});
 await fs.copyFile(path.join(root,'node_modules/three/LICENSE'),path.join(output,'assets/anatomy/three-LICENSE.txt'));
 console.log(`Built ${routes.length} routes, local models, licensed anatomy and self-hosted fonts.`);

@@ -35,3 +35,7 @@ The four JPEGs under `assets/screenshots/` were captured on 10 October 2026 from
 The demo company is Northstar Studio; all people and birthdates are fictional. The captured views are the team timeline, selected-month review, individual report text and workspace overview. These are actual rendered screens, not recreated interface mockups. The report screenshot is a scrolled view of its descriptive sections. No report content, scoring or other production component was modified for the screenshot. The screenshots retain the current software's Staff Profiler branding; the site identifies them as the existing interface transitioning to VALEX Innovations. Rebranding the actual application is a separate change.
 
 Screenshot filenames: `team-timeline.jpg`, `monthly-review.jpg`, `person-report.jpg`, `workspace.jpg`.
+
+## Company-focused presentation
+
+The homepage presents the individual, working relationship and company view before the personal demonstration. Its language is an informed conversation with company leaders; independent sources and methodology details remain in the dedicated research centre. The compact anatomical controls open on request, and a pause control stays visible. The first page interactions load in one deferred bundle; the expensive viewer remains lazy.
