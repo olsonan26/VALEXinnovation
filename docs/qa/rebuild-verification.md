@@ -21,3 +21,11 @@ Payload checks: Three viewer bundle approximately 587KB raw / 150KB gzip; atlas 
 Limitations: physical phones, Safari keyboard/safe-area behavior, live OS reduced-motion switching, complete screen-reader testing and hardware frame timing are not verified. No WCAG certification or Lighthouse score is claimed. The complete Gateway report remains unavailable at its original CIA link, disclosed in the research audit. Company backend/authentication and server-submitted inquiries are outside this standalone site.
 
 This records local verification before production publication. The user subsequently authorised push, merge and live deployment. Production verification is recorded separately after publication.
+
+## Company-conversation refinement
+
+The revised homepage leads with the company proposition and real product showcase; the personal analyser follows the company demonstration near the end. The three rejected phrases are covered by a regression check. Rechecked all ten routes at document widths 320/376/769/1025/1441: 50 checks, no horizontal page overflow. Compact anatomy disclosure, region explanation, static/interactive switch and age/birthday results passed in the browser. No website console errors observed. `npm test` now passes 22 tests.
+
+The light page interactions are bundled into the deferred shared entry. The 3D module remains lazy. This avoids a first-click race while downloading individual modules. The 3D model draws its first frame before removing the static fallback. Region leader lines use the current scene dimensions.
+
+The source conversation was reviewed as company-provided material. Practical themes were incorporated; accuracy figures and endorsements were not treated as verified evidence. Dedicated science content remains available for interested visitors. `refined-home.jpg` records the updated local render.

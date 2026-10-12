@@ -9,3 +9,5 @@ Architecture: keep the existing static JavaScript application. Node generates te
 Motion: 150ms press feedback, 220ms opacity feedback, a single 300ms hero entrance. No page-wide scroll effects. Three renders on demand unless conceptual signals or a user-started tour need frames. Pause offscreen and in hidden tabs. Reduced motion disables automated signals/tours and spatial CSS effects.
 
 Publication: local verification completed first. On 12 October 2026 the user explicitly authorised pushing, merging and making the rebuild live. The connected main branch triggers production deployment; verify the resulting public site after the merge.
+
+Editorial refinement: company-led scientific conversation, large real-product showcase, anatomical lighting/depth, progressive viewer controls, a practical demonstration invitation and the personal analyser near the end. Light page controls are bundled into a deferred entry so first interactions do not race lazy module downloads; the expensive anatomical scene remains lazy.

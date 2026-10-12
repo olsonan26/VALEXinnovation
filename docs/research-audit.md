@@ -18,3 +18,11 @@ The CIA's STARGATE retrospective was verified and reports insufficient reliabili
 Three explicit evidence categories: independent findings; proprietary name structures/timing interpretations; proposed evaluation. No active trial or validated success rate is invented. Circadian visuals compute schedule windows only. The historical 23/28/33-day visual is labelled unsupported mathematics. Anatomy is educational, and cortical highlights/pathways are approximate, not recorded neural activity.
 
 Latest input requirement supersedes the master directive's original first-name-only form: first and last name plus either age or full birthday. Birthday derives age and enables current-year annual values. More detail is not described as demonstrated predictive accuracy.
+
+## Additional company conversation supplied on 12 October
+
+Read `Innovation  discussion.docx` in full as source material. Adopted its practical themes: individual potential, supportive working conditions, development over time, a straightforward initial experience, and demonstrations that company leaders can compare with people they already know. No New Zealand economics or geography is included in the public copy.
+
+The document is a conversation, not independent corroboration of the statements within it. Self-reported accuracy figures, military/bank endorsements, universal legal compliance, bias-free claims, demographic/name stereotypes and claims of reading actual brain connections were not promoted into verified product facts. The actual product screenshots, existing calculations and user feedback remain the demonstration evidence.
+
+Latest editorial request: write as an informed scientific conversation with a company. The homepage now explains the individual, working relationship and company view; the analyser sits near the end. The specific founder tagline, repeated validation sentence and research-context footnote requested for removal are absent from the main sales journey. Detailed research remains available on the dedicated science route.

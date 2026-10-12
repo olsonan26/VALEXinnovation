@@ -1,4 +1,5 @@
 import {comparePair,ProfileInputError} from './demo-model.js';
+if(document.getElementById('pair-form')){
 const byId=id=>document.getElementById(id);
 const form=byId('pair-form'),result=byId('pair-results'),error=byId('pair-error'),submit=byId('calculate-pair');
 const today=new Date(),maxDate=[today.getFullYear(),String(today.getMonth()+1).padStart(2,'0'),String(today.getDate()).padStart(2,'0')].join('-');
@@ -42,3 +43,5 @@ byId('clear-pair').addEventListener('click',()=>{form.reset();clearResult();byId
 addEventListener('pageshow',e=>{if(e.persisted){form.reset();clearResult();}});
 addEventListener('pagehide',()=>{form.reset();clearResult();});
 submit.disabled=false;
+
+}

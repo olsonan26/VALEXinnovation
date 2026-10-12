@@ -1,5 +1,6 @@
 import {exploreName} from './personal-model.js';
 import {getBaseLetterValue} from './lib/name-engine.js';
+if(document.getElementById('personal-form')){
 const el=id=>document.getElementById(id),form=el('personal-form'),result=el('personal-results');
 let model=null;
 const today=new Date();el('personal-dob').max=[today.getFullYear(),String(today.getMonth()+1).padStart(2,'0'),String(today.getDate()).padStart(2,'0')].join('-');
@@ -40,3 +41,5 @@ el('reflection-questions').addEventListener('change',()=>{const answers=[...el('
 addEventListener('pageshow',e=>{if(e.persisted){form.reset();timingMode();clearResults();}});
 addEventListener('pagehide',()=>{form.reset();timingMode();clearResults();});
 timingMode();
+
+}
