@@ -27,4 +27,8 @@ The transcript also contains unsupported claims about perfect recall, hypnosis, 
 - No browser console errors or warnings in local verification.
 - `sound-experience.jpg` captures the finished local sound experience.
 
-Production publication and verification are recorded by the merged GitHub pull request and deployment status. Local verification alone is not a production result.
+## Production verification
+
+GitHub PR [#3](https://github.com/olsonan26/VALEXinnovation/pull/3) merged as `85f7ca61861b77b3d0e139ebb60b9350594b8542`. Vercel reports deployment completed successfully: [deployment](https://vercel.com/alex-olsons-projects-43241a84/vale-xinnovation/7SnnTCUtPiHidpShac1u7o9RGMT8).
+
+Verified the public homepage at https://vale-xinnovation.vercel.app/: the middle audio window displays 42%, 53% and 5%; 8× zoom displays the 0.51–0.69-second window; the emotional-meaning control updates its description; and the canonical timeline reaches age 53 with first-name E / last-name G. No live browser errors or warnings were observed. `sound-experience-live.jpg` records the public page. This final documentation update does not change site code.
