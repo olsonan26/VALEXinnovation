@@ -36,17 +36,17 @@ The demo company is Northstar Studio; all people and birthdates are fictional. T
 
 Screenshot filenames: `team-timeline.jpg`, `monthly-review.jpg`, `person-report.jpg`, `workspace.jpg`.
 
-## Current homepage and fictional reveal
+## Current homepage and calculated reveal
 
-The homepage uses the supplied Staffprofiler logo, people illustration and a product checklist, followed by the company workflow, three reasons and closing invitation. Its consistent “See the demo” actions lead to `/explorer/`. Authentic software screenshots remain clearly labelled. The website is separate from the operational HR application.
+The homepage uses the supplied Staffprofiler logo, people illustration and product checklist, followed by company workflow, three reasons and a closing invitation. All ten routes use the same white/forest-green palette and Manrope typography. See the demo actions lead to `/explorer/`; the actual-software link goes directly to `/platform/#platform`. Screenshot tabs and enlargement retain the authentic software images.
 
-The main demo now asks visitors to choose between two fictional people. **Find Out** reveals an explicitly scripted story about closer alignment or working differences with a fictional manager. This flow collects no personal details, computes no scores and is separate from the original model. Real two-person comparison and the individual age-or-birthday preview remain available in disclosures below.
+The main demo offers seven fictional people and one fictional manager. Let’s find out calls the unchanged comparison engine at runtime. The manager-perspective directional overall chooses alignment at 50 or above, differences below 50, without rounding. Four examples meet the cutoff; three fall below it. Scores/formulas stay out of the public reveal. These are fictional model examples, not hiring recommendations.
 
-Both scan videos are pending user delivery. The correct local media slots are prepared in `assets/demo/scan-videos.json`; until configured, the reveal shows the supplied people illustration and a clear video-pending message. See `docs/scan-video-handoff.md` for implementation, the full transcript-direction checklist and actual browser verification. No engine calculations, operational reports or application functionality were changed.
+The supplied green-check animation blends into the page without player chrome or added text overlays and starts only after the reveal action. The X video is pending; its branch currently shows a static X and a clear pending notice. Local media is configured in `assets/demo/scan-videos.json`. Original engine calculations, real comparison, age/birthday preview and operational application are preserved. See `docs/scan-video-handoff.md`, `docs/demo-calculation-audit.json` and `docs/scan-video-provenance.json`.
 
 Run optional DOM checks after building:
 
 - `node scripts/verify-marketing-dom.mjs <folder containing node_modules/jsdom>`
 - `node scripts/verify-illustrative-media-dom.mjs <folder containing node_modules/jsdom>`
 
-The media script uses a simulated video element. Actual playback verification must follow once the real files arrive.
+The media script simulates playback methods; actual supplied-video playback is separately verified in the browser.

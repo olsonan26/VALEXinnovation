@@ -1,0 +1,362 @@
+[
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/",
+    "scroll": 320,
+    "width": 320,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/platform/",
+    "scroll": 320,
+    "width": 320,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/how-it-works/",
+    "scroll": 320,
+    "width": 320,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/science/",
+    "scroll": 320,
+    "width": 320,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/organizations/",
+    "scroll": 320,
+    "width": 320,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/explorer/",
+    "scroll": 320,
+    "width": 320,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/about/",
+    "scroll": 320,
+    "width": 320,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/contact/",
+    "scroll": 320,
+    "width": 320,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/science/archive/",
+    "scroll": 320,
+    "width": 320,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/science/anatomy/",
+    "scroll": 320,
+    "width": 320,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/",
+    "scroll": 376,
+    "width": 376,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/platform/",
+    "scroll": 376,
+    "width": 376,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/how-it-works/",
+    "scroll": 376,
+    "width": 376,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/science/",
+    "scroll": 376,
+    "width": 376,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/organizations/",
+    "scroll": 376,
+    "width": 376,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/explorer/",
+    "scroll": 376,
+    "width": 376,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/about/",
+    "scroll": 376,
+    "width": 376,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/contact/",
+    "scroll": 376,
+    "width": 376,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/science/archive/",
+    "scroll": 376,
+    "width": 376,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/science/anatomy/",
+    "scroll": 376,
+    "width": 376,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/",
+    "scroll": 769,
+    "width": 769,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/platform/",
+    "scroll": 769,
+    "width": 769,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/how-it-works/",
+    "scroll": 769,
+    "width": 769,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/science/",
+    "scroll": 769,
+    "width": 769,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/organizations/",
+    "scroll": 769,
+    "width": 769,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/explorer/",
+    "scroll": 769,
+    "width": 769,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/about/",
+    "scroll": 769,
+    "width": 769,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/contact/",
+    "scroll": 769,
+    "width": 769,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/science/archive/",
+    "scroll": 769,
+    "width": 769,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/science/anatomy/",
+    "scroll": 769,
+    "width": 769,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/",
+    "scroll": 1441,
+    "width": 1441,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/platform/",
+    "scroll": 1441,
+    "width": 1441,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/how-it-works/",
+    "scroll": 1441,
+    "width": 1441,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/science/",
+    "scroll": 1441,
+    "width": 1441,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/organizations/",
+    "scroll": 1441,
+    "width": 1441,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/explorer/",
+    "scroll": 1441,
+    "width": 1441,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/about/",
+    "scroll": 1441,
+    "width": 1441,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/contact/",
+    "scroll": 1441,
+    "width": 1441,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/science/archive/",
+    "scroll": 1441,
+    "width": 1441,
+    "minFont": 16,
+    "overflow": false
+  },
+  {
+    "background": "rgb(255, 255, 255)",
+    "heading": "Manrope, Arial, sans-serif",
+    "path": "/science/anatomy/",
+    "scroll": 1441,
+    "width": 1441,
+    "minFont": 16,
+    "overflow": false
+  }
+]
