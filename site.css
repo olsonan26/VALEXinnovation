@@ -27,6 +27,7 @@ input,textarea{font-size:16px}button{user-select:none}.region-buttons button,.vi
 @media(max-width:360px){.enterprise-hero h1{font-size:2.3rem}.enterprise-hero .actions .button{width:100%}.hero-capabilities{gap:10px 15px}.enterprise-hero .brain-stage{height:370px}}
 
 /* A measured sound, a conceptual network and a separate model timeline. */
+.supplied-brand{display:block;width:230px;flex-shrink:0;background:#fff;border-radius:5px;padding:3px 8px}.supplied-brand>img{width:100%;height:auto}.footer-grid .supplied-brand{width:205px}@media(max-width:600px){.supplied-brand{width:170px}.site-header .header-contact{font-size:.65rem;padding:12px;min-height:44px}.header-inner{gap:10px}}
 #human-context{scroll-margin-top:130px}#signal-wave{cursor:crosshair}.signal-window-chips button[aria-pressed=true]{border-color:var(--gold);color:var(--gold)}
 .signal-experience{border:1px solid #3b5067;border-radius:18px;overflow:hidden;background:linear-gradient(145deg,#14263b,#0a1424 65%);box-shadow:0 30px 90px #0004}
 .signal-top{display:flex;justify-content:space-between;align-items:end;gap:32px;padding:36px 40px;border-bottom:1px solid var(--line)}

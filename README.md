@@ -36,12 +36,17 @@ The demo company is Northstar Studio; all people and birthdates are fictional. T
 
 Screenshot filenames: `team-timeline.jpg`, `monthly-review.jpg`, `person-report.jpg`, `workspace.jpg`.
 
-## Clear homepage and demo
+## Current homepage and fictional reveal
 
-The homepage is now a focused five-section Staff Profiler presentation: customer benefit, working-relationship problem, two-person example, three product-grounded reasons, and closing invitation. Its three “See the demo” actions all lead to `/explorer/`. It uses authentic workspace/report screenshots with fictional-data captions and no JavaScript. The new presentation is in `content/marketing.mjs` and `home.css`.
+The homepage uses the supplied Staffprofiler logo, people illustration and a product checklist, followed by the company workflow, three reasons and closing invitation. Its consistent “See the demo” actions lead to `/explorer/`. Authentic software screenshots remain clearly labelled. The website is separate from the operational HR application.
 
-The existing `/explorer/` route now starts with the canonical fictional two-person comparison, showing 69.5% and 71.2% immediately. Two-profile entry and the original individual age-or-birthday preview are optional disclosures. `demo.js` bundles the existing comparison/personal UI; `demo.css` supplies its light presentation. No operational application, engine calculations or reports were changed.
+The main demo now asks visitors to choose between two fictional people. **Find Out** reveals an explicitly scripted story about closer alignment or working differences with a fictional manager. This flow collects no personal details, computes no scores and is separate from the original model. Real two-person comparison and the individual age-or-birthday preview remain available in disclosures below.
 
-The previous brain and science experiences remain on supporting pages; they are no longer part of the homepage. Main navigation on supporting pages is reduced to Product, How it works and The demo. The new workflow page describes use rather than calculation mechanics.
+Both scan videos are pending user delivery. The correct local media slots are prepared in `assets/demo/scan-videos.json`; until configured, the reveal shows the supplied people illustration and a clear video-pending message. See `docs/scan-video-handoff.md` for implementation, the full transcript-direction checklist and actual browser verification. No engine calculations, operational reports or application functionality were changed.
 
-See `docs/qa/simple-homepage-verification.md` for current scope and evidence. The build and 26 tests pass; functional DOM checks pass. Actual desktop/mobile visual review remains unverified because local browser use was disabled in Work settings during this change.
+Run optional DOM checks after building:
+
+- `node scripts/verify-marketing-dom.mjs <folder containing node_modules/jsdom>`
+- `node scripts/verify-illustrative-media-dom.mjs <folder containing node_modules/jsdom>`
+
+The media script uses a simulated video element. Actual playback verification must follow once the real files arrive.
