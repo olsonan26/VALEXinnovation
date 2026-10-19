@@ -1,0 +1,125 @@
+{
+  "date": "2026-10-19",
+  "manager": {
+    "fullName": "Jamie Alexander Reed",
+    "calledName": "Jamie Reed",
+    "birthdate": "1978-04-16"
+  },
+  "metric": "comparePair(manager,profile).forward.overall",
+  "threshold": 50,
+  "roundBeforeClassification": false,
+  "profiles": [
+    {
+      "id": "amelia",
+      "fullName": "Amelia Rose Morgan",
+      "calledName": "Amelia Morgan",
+      "birthdate": "1990-06-18",
+      "profile": {
+        "id": "amelia",
+        "fullName": "Amelia Rose Morgan",
+        "calledName": "Amelia Morgan",
+        "birthdate": "1990-06-18"
+      },
+      "score": 60.6923786959818,
+      "reverseScore": 60.30407505686125,
+      "outcome": "alignment",
+      "version": "lettrology-user-model-2026-10-08-v2"
+    },
+    {
+      "id": "freya",
+      "fullName": "Freya Josephine Bell",
+      "calledName": "Freya Bell",
+      "birthdate": "1975-01-12",
+      "profile": {
+        "id": "freya",
+        "fullName": "Freya Josephine Bell",
+        "calledName": "Freya Bell",
+        "birthdate": "1975-01-12"
+      },
+      "score": 42.05306861258529,
+      "reverseScore": 47.60379454131918,
+      "outcome": "differences",
+      "version": "lettrology-user-model-2026-10-08-v2"
+    },
+    {
+      "id": "grace",
+      "fullName": "Grace Eleanor Parker",
+      "calledName": "Grace Parker",
+      "birthdate": "1985-10-25",
+      "profile": {
+        "id": "grace",
+        "fullName": "Grace Eleanor Parker",
+        "calledName": "Grace Parker",
+        "birthdate": "1985-10-25"
+      },
+      "score": 72.48645375284308,
+      "reverseScore": 63.65537717968158,
+      "outcome": "alignment",
+      "version": "lettrology-user-model-2026-10-08-v2"
+    },
+    {
+      "id": "oliver",
+      "fullName": "Oliver James Lewis",
+      "calledName": "Oliver Lewis",
+      "birthdate": "1975-01-12",
+      "profile": {
+        "id": "oliver",
+        "fullName": "Oliver James Lewis",
+        "calledName": "Oliver Lewis",
+        "birthdate": "1975-01-12"
+      },
+      "score": 43.304465504169826,
+      "reverseScore": 46.126472706595905,
+      "outcome": "differences",
+      "version": "lettrology-user-model-2026-10-08-v2"
+    },
+    {
+      "id": "mia",
+      "fullName": "Mia Charlotte Turner",
+      "calledName": "Mia Turner",
+      "birthdate": "2000-04-12",
+      "profile": {
+        "id": "mia",
+        "fullName": "Mia Charlotte Turner",
+        "calledName": "Mia Turner",
+        "birthdate": "2000-04-12"
+      },
+      "score": 68.30878127369219,
+      "reverseScore": 71.02073161485974,
+      "outcome": "alignment",
+      "version": "lettrology-user-model-2026-10-08-v2"
+    },
+    {
+      "id": "zoe",
+      "fullName": "Zoe Alexandra Blake",
+      "calledName": "Zoe Blake",
+      "birthdate": "1975-01-12",
+      "profile": {
+        "id": "zoe",
+        "fullName": "Zoe Alexandra Blake",
+        "calledName": "Zoe Blake",
+        "birthdate": "1975-01-12"
+      },
+      "score": 42.25786201667931,
+      "reverseScore": 48.137886656557995,
+      "outcome": "differences",
+      "version": "lettrology-user-model-2026-10-08-v2"
+    },
+    {
+      "id": "noah",
+      "fullName": "Noah Benjamin Foster",
+      "calledName": "Noah Foster",
+      "birthdate": "2000-04-12",
+      "profile": {
+        "id": "noah",
+        "fullName": "Noah Benjamin Foster",
+        "calledName": "Noah Foster",
+        "birthdate": "2000-04-12"
+      },
+      "score": 66.99167930250191,
+      "reverseScore": 69.3021626231994,
+      "outcome": "alignment",
+      "version": "lettrology-user-model-2026-10-08-v2"
+    }
+  ]
+}

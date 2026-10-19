@@ -5,11 +5,13 @@ import './science-ui.js';
 import './signal-experience.js';
 const el=id=>document.getElementById(id);
 const menu=document.querySelector('.menu-toggle'),nav=el('main-nav');
+if(menu&&nav){
 function closeMenu(){menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation');nav.classList.remove('open');}
 menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Close navigation':'Open navigation');nav.classList.toggle('open',open);});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){closeMenu();menu.focus();}});
 document.addEventListener('click',e=>{if(!e.target.closest('.site-header'))closeMenu();});
 matchMedia('(min-width: 1200px)').addEventListener('change',closeMenu);
+}
 for(const story of document.querySelectorAll('[data-company-story]'))for(const button of story.querySelectorAll('[data-company]'))button.addEventListener('click',()=>{
  const supportive=button.dataset.company==='b';for(const b of story.querySelectorAll('[data-company]'))b.setAttribute('aria-pressed',String(b===button));story.classList.toggle('supportive',supportive);
  el('company-title').textContent=supportive?'Capable person. Supportive conditions.':'Capable person. Difficult conditions.';

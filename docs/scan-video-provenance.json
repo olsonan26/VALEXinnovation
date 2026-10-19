@@ -1,0 +1,13 @@
+{
+  "received": "2026-10-19",
+  "source": "GREEN  CHECK SCAN VIDEO.mp4",
+  "path": "assets/demo/green-check-scan.mp4",
+  "bytes": 14466176,
+  "sha256": "c29080bdd9eabf875bbc4d885349f787971e5ba27f92638fffc4bfa286a7c851",
+  "width": 1916,
+  "height": 1080,
+  "durationSeconds": 10.041667,
+  "format": "H.264 video with AAC audio in MP4",
+  "adaptation": "Original bytes unchanged. Muted inline presentation; no caption overlays or player controls. CSS edge blending and responsive cropping only.",
+  "missing": "X scan video pending user delivery"
+}

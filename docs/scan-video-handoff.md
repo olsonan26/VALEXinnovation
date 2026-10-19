@@ -1,51 +1,47 @@
-# Fictional team-fit video handoff
+# Calculated fictional scan demo and shared branding
 
-19 October 2026. Both generated scan videos are still to be supplied by the user.
+19 October 2026. The green-check clip is supplied and connected. The X clip is still pending user delivery.
 
-## Experience
+## Current experience
 
-The main public demo at `/explorer/` uses fictional people and an explicitly scripted company story. Visitors select Amelia Morgan (closer alignment) or Oliver Lewis (different approaches), then click **Find Out**. No actual personal details, company records, identity documents or Social Security numbers enter this experience. These stories do not call or approximate the real model.
+The standalone public demo at `/explorer/` offers seven fictional people and one fictional manager. Previous/Next cycle through all seven. **Let’s find out** runs the preserved comparison engine, chooses the corresponding animation and reveals its result after playback. It collects no real applicant or company records.
 
-The separate real two-person comparison and individual preview remain in disclosures below. The canonical engines, calculation body, comparison values and operational application are unchanged. The scripted stories must never be substituted for results of a real-person submission.
+The selected metric is the original directional overall from the manager's perspective: `comparePair(demoManager, profile).forward.overall`. This is a person-to-manager comparison, not a new organisation-wide score. No averaging, rounding or alternate calculation is introduced. Scores below 50 choose differences; exactly 50 and above choose alignment. Every selected example also falls on the same side of the cutoff from the reverse perspective. The UI keeps percentages, components and formulas out of this main demonstration. Reproducible internal values are in `demo-calculation-audit.json`.
 
-## Add the videos
+Four examples meet the cutoff and three fall below it. These are computed model results for fictional identities, not proof that a real person will succeed or a hiring recommendation. The separate real two-person comparison and individual age/birthday preview remain below in disclosures, with their existing calculations intact. The operational application is untouched.
 
-1. Inspect the two supplied clips and confirm which depicts closer alignment and which depicts working differences. Do not guess from the filenames.
-2. Put the clips under `assets/demo/`, for example `team-alignment.mp4` and `team-differences.mp4`. Provide English WebVTT captions if there is narration or meaningful written content that is not otherwise described in the page. Preserve user-supplied assets unless editing is requested.
-3. Set the corresponding `src` and optional `captions` fields in `assets/demo/scan-videos.json`. Only local `/assets/demo/` MP4/WebM and VTT paths are accepted. The current values are intentionally null. No nonexistent clip URLs are requested.
-4. Build and check actual playback on desktop and mobile. Test both branches, replay via Find Out, completion, skip, unavailable video, blocked playback, reduced motion and switching profiles while playing.
+## Integrated animation
 
-On Find Out with a configured clip, its native video player appears; the selected scripted result stays hidden until completion or Skip. Playback is muted, inline, controlled and never looping. Reduced motion requires an explicit Play action. Playback failure and slow initial loading fall back to the poster and the correct scripted result. Profile changes clear prior playback/result state; hidden pages pause playback.
+The supplied `GREEN  CHECK SCAN VIDEO.mp4` is copied byte-for-byte to `assets/demo/green-check-scan.mp4`. It is H.264/AAC, 1916 x 1080, 10.041667 seconds. Inspection frames and the source hash are recorded in the repository.
 
-Until the clips arrive, Find Out reveals the correct story immediately with the supplied people illustration and the status **The scan video is being prepared.** This is the complete interim flow, not a claim that a clip or a scan exists.
+The animation is borderless, full width and softly blended into the white page. It has no native player controls or added caption/text overlays. It loads only after the visitor triggers the reveal; playback is muted, inline and never looping. The next clip will use the same presentation. Descriptive context and result copy remain outside the animation. The native clip has not been altered or passed off as a literal human scan.
 
-## Transcript direction implemented
+A small Show result action allows the visitor to finish early. Start scan appears only for reduced-motion preference or blocked playback. Slow loading/errors reveal the correct calculated result. Switching profiles clears prior playback/results. Hidden pages pause playback. The X branch currently shows an explicit static X with a truthful pending-video message; it never plays the green clip.
 
-| Direction | Website treatment |
-| --- | --- |
-| Distinctive Staffprofiler identity, red “i” | Supplied original logo in the site header/footer, including supporting pages |
-| People stretching into the distance, selected individuals | Supplied original people illustration in the opening and reveal area |
-| Product checklist up front | Individual profiles, two-person comparisons, staff/applicants/jobs, team timelines |
-| Recruitment and existing staff management | Clear company-view section plus the existing three outcome-focused reasons |
-| Show an experience without exposing mechanics | Fictional selection → Find Out → scripted reveal; actual mechanics stay out of the main journey |
-| Two scan-video outcomes | Separate alignment/differences media slots and working completion/skip/fallback logic |
-| Background checks, 48-hour turnaround, pricing, guaranteed longevity or savings | Not advertised as available: no verified provider, agreed service terms, pricing or outcome evidence supplied |
+When the X clip arrives, inspect it, copy the original under `assets/demo/`, then configure `differences.src` in `assets/demo/scan-videos.json`. Use only the accepted local MP4/WebM path. Do not add caption overlays. Verify playback on both outcomes and mobile before publishing.
 
-The checklist sketch is reference material and has not been published as a literal list of verified capabilities. The original attached transcript and private conversation are not committed.
+## Shared visual identity
+
+All ten routes now use white backgrounds, forest green buttons, dark green text and Manrope typography. Supporting pages no longer use the navy/gold/serif theme. Their header uses the supplied logo and the same minimal primary action as the homepage. The actual software screens link goes directly to `/platform/#platform`; the four real screenshots, tabs and enlarged image dialog remain available. Screenshots are authentic and unchanged.
+
+Main text is enlarged and ordinary rendered HTML text has a 16px minimum, with 18px body text and larger headings/controls. The homepage workspace image can open at its original resolution. Captions distinguish real software from fictional demonstration data.
+
+## Peter's requested direction
+
+- Supplied Staffprofiler identity and people illustration.
+- Clear product checklist: individual profiles, two-person comparisons, staff/applicants/jobs and team timelines.
+- Recruitment conversations and ongoing staff support, grounded in existing functions.
+- A direct choice -> scan -> result experience, keeping mechanics private.
+- Actual calculations on fictional examples, per the user's revised instruction.
+- No unverified background-check service, delivery guarantee, pricing or outcome guarantee advertised from the reference sketch.
 
 ## Verification
 
-- Syntax checks, ten-route build and 29 tests pass, including unchanged model hashes, canonical comparison parity, distinct scripted stories and media-path validation.
-- Production-bundle DOM checks pass for both missing-video stories, changing selection, real comparison, validation/clear, age/birthday mode and annual values.
-- Simulated-media DOM checks pass for the selected clip/captions, completion, Skip, reduced motion, blocked Play, error and delayed loading. These use mocked media methods, not actual video playback.
-- Browser review completed on local production build: desktop/mobile homepage, both fictional outcomes, keyboard selection/Enter, stale-result reset, real example 69.5% / 71.2%, individual example/clear and old `#two-person` destination.
-- No page horizontal overflow on home or revealed demo at measured CSS widths 320, 376, 769, 1025 and 1441. Browser zoom causes requested viewport sizes to differ; widths are DOM measurements. No browser errors/warnings observed.
-- Actual supplied-video playback remains pending the two files. No generated/placeholder footage has been passed off as the supplied video.
+- Syntax checks, ten-route production build and 31 tests pass, including pinned engine hashes, directional parity, all seven examples, both threshold boundaries and media-path validation.
+- Production-bundle DOM checks pass: both outcomes/reset, canonical 69.5% / 71.2% real comparison, invalid-input/clear behavior and individual age/birthday preview.
+- Simulated media checks cover completion, Show result, profile changes, reduced motion, blocked playback, error and slow loading. They assert no native controls or caption tracks.
+- Actual green video playback completed in the browser, with the calculated match revealed at 10.041667 seconds. The low-scoring branch showed the static X without requesting the green video.
+- All ten routes were measured at CSS client widths 320, 376, 769 and 1441: white background, Manrope headings, ordinary visible HTML text minimum 16px, no page horizontal overflow. See `qa/calculated-brand-layout-audit.json`.
+- Product tabs and enlarged screenshot dialog were reviewed in the shared light branding. Desktop/mobile screenshots are saved under `docs/qa/`.
 
-Asset originals, dimensions and SHA-256 hashes are recorded in `docs/brand-asset-provenance.json`. Screenshots are under `docs/qa/illustrative-*`.
-
-## Production confirmation
-
-PR [#5](https://github.com/olsonan26/VALEXinnovation/pull/5) merged as `567f2d5a22d373841326d30a2cbcd3f82f137d8d`. Vercel reports the [production deployment](https://vercel.com/alex-olsons-projects-43241a84/vale-xinnovation/ExciUp4NYko2ro5hZnsNBXSPde6e) completed successfully.
-
-Browser verification at https://vale-xinnovation.vercel.app/ confirmed the new logo/people opening, the demo destination, both Find Out outcomes, switching/reset and the explicit pending-video status. Live mobile result had equal client/scroll widths (338px in this browser's effective viewport). The separate real comparison still displayed 69.5% and 71.2%. No live browser errors/warnings were observed. `illustrative-live-home.jpg` and `illustrative-live-reveal.jpg` capture the public site. Actual video playback remains pending the two files.
+Production release confirmation is recorded after the deployment is verified.

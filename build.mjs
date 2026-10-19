@@ -8,7 +8,7 @@ if(path.dirname(output)!==root||path.basename(output)!=='dist')throw new Error('
 await fs.rm(output,{recursive:true,force:true});
 await fs.mkdir(output,{recursive:true});
 for(const directory of ['assets','lib'])await fs.cp(path.join(root,directory),path.join(output,directory),{recursive:true});
-for(const file of ['site.css','site.js','home.css','demo.css','illustrative.css','personal-ui.js','science-ui.js','product.js','proof.js','personal-model.js','demo-model.js','signal-model.js','signal-experience.js'])await fs.copyFile(path.join(root,file),path.join(output,file));
+for(const file of ['site.css','site.js','home.css','demo.css','illustrative.css','readability.css','personal-ui.js','science-ui.js','product.js','proof.js','personal-model.js','demo-model.js','signal-model.js','signal-experience.js'])await fs.copyFile(path.join(root,file),path.join(output,file));
 for(const route of routes){const folder=path.join(output,route.slice(1));await fs.mkdir(folder,{recursive:true});await fs.writeFile(path.join(folder,'index.html'),renderPage(route));}
 await fs.mkdir(path.join(output,'assets/fonts'),{recursive:true});
 for(const [family,files] of Object.entries({'manrope':['manrope-latin-400-normal.woff2','manrope-latin-600-normal.woff2'],'instrument-serif':['instrument-serif-latin-400-normal.woff2']})){
