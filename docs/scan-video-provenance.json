@@ -52,5 +52,19 @@
       "adaptation": "Original bytes unchanged. Same inline presentation without caption overlays or player controls."
     }
   ],
-  "supersedes": "Earlier GREEN  CHECK SCAN VIDEO.mp4; superseded public copy removed."
+  "supersedes": "Earlier GREEN  CHECK SCAN VIDEO.mp4; superseded public copy removed.",
+  "webDerivatives": [
+    {
+      "path": "assets/demo/female-green-match-web.mp4",
+      "sha256": "a7e313465763439674f166dbfd30c73203bb8dde950da83f9aa48f2f6bd438c5",
+      "bytes": 2927152,
+      "adaptation": "Delivery derivative, H.264 Main 4.1 CRF23 maxrate3M faststart; original dimensions, fps, frames and duration preserved. Source originals retained."
+    },
+    {
+      "path": "assets/demo/female-x-no-match-web.mp4",
+      "sha256": "f07b418ff08c148cf7394862c398147102c8f5cc92bd0130fb895865f363078d",
+      "bytes": 2671246,
+      "adaptation": "Delivery derivative, H.264 Main 4.1 CRF23 maxrate3M faststart; original dimensions, fps, frames and duration preserved. Source originals retained."
+    }
+  ]
 }
