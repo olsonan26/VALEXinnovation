@@ -55,3 +55,11 @@ Each fictional record now has an explicit `animation` assignment authored for th
 The existing calculation alone still selects green at 50 or above and X below 50. The animation assignment only chooses the matching visual variant; it has no effect on scores. Unit and production DOM checks cover all four combinations, preserving original score fixtures and reset/playback behavior.
 
 The demo also offers an explicit choice labelled simply **Male** / **Female**, under Person being compared. Selecting a fictional person sets its authored default; the visitor can change it. Changing either choice clears prior playback and results. This selection changes only the clip variant, never the comparison result. No name-based gender detection is performed.
+
+## Female video delivery optimization
+
+After a user report of lag, production HTTP inspection confirmed correct 206 range delivery and source MP4 inspection confirmed early moov metadata. Source female green was 15,233,644 bytes / 12.13 Mbps; source female X was 13,610,417 bytes / 10.84 Mbps. High delivery bitrate is a plausible buffering contributor; exact user-device stutter could not be reproduced because local browser access was disabled in Work settings.
+
+The female media slots now use optimized web derivatives: green 2,927,152 bytes / 2.33 Mbps; X 2,671,246 bytes / 2.13 Mbps. Both preserve 1916x1080, 24fps, 241 frames and 10.041667 seconds. Encode: H.264 Main level 4.1, yuv420p, CRF 23, 3 Mbps maxrate / 6 Mbps buffer, 48-frame keyframes and faststart. Source files remain unmodified. SSIM versus originals: green 0.987391, X 0.988306. The final green frame was visually inspected. This reduces transfer/decode burden but is not evidence of smooth playback on the user's device.
+
+Build, 32 tests and production-bundle DOM checks pass. Regression checks enforce a 4 MB budget and moov-before-mdat for the female web clips. Labels remain Male and Female; calculations and outcomes remain unchanged.
