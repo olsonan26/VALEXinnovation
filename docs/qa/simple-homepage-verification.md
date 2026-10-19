@@ -32,3 +32,9 @@ Visitors can optionally open the two-profile form. Editing clears the stale resu
 Local browser use is disabled in the current Work settings. The browser tool refused to open a page. Actual desktop/mobile rendered layout, overflow, screenshot crops, keyboard focus appearance and browser interaction review could not be verified. A request to enable access was sent while implementation continued. DOM checks do not replace visual or browser testing. No new website screenshot is presented as verified evidence.
 
 Functional DOM verification is reproducible after build with `node scripts/verify-marketing-dom.mjs <folder containing node_modules/jsdom>`. jsdom was installed in a temporary QA folder and is not a production dependency.
+
+## Production publication
+
+PR [#4](https://github.com/olsonan26/VALEXinnovation/pull/4) merged as `67343fd6cfd26f84145b78e2540e8334f16a263f`. Vercel reported a successful [production deployment](https://vercel.com/alex-olsons-projects-43241a84/vale-xinnovation/3L7cnr9GcJfqJhr1GWXut1VsEhQZ).
+
+Fetched the public homepage, demo, both new stylesheets and demo bundle from https://vale-xinnovation.vercel.app/; all returned 200. The public homepage has five sections and three consistent demo links. Stylesheets and the demo bundle match the local verified build after Windows/Linux line-ending normalization. The actual public demo HTML and bundle passed DOM checks for initial 69.5% / 71.2% results, optional profile entry, editing, example reload and clearing. This is functional production-content verification, not a browser or visual layout review.
