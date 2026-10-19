@@ -1,4 +1,4 @@
 {
-  "alignment": {"src": "/assets/demo/green-check-scan.mp4", "captions": null},
-  "differences": {"src": null, "captions": null}
+  "alignment": {"src": "/assets/demo/green-match-scan.mp4", "captions": null},
+  "differences": {"src": "/assets/demo/x-no-match-scan.mp4", "captions": null}
 }
