@@ -10,9 +10,9 @@
       "adaptation": "Unmodified user-supplied PNG; displayed responsively."
     },
     {
-      "path": "assets/demo/team-possibilities.png",
-      "source": "people for the staff website!.png",
-      "sha256": "48c705ee06f157b20a0131a6da1729538347bd52b008d797a44e929b9ed308be",
+      "path": "assets/demo/team-possibilities-updated.png",
+      "source": "people.png",
+      "sha256": "a4847e41010bf3d6e429826e87ce639c41665340ec0558fb20bc7aa72c097858",
       "width": 1672,
       "height": 941,
       "adaptation": "Unmodified user-supplied PNG; displayed responsively."
