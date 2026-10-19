@@ -1,4 +1,4 @@
-# VALEX Innovations
+# Staff Profiler marketing site
 
 A standalone, static enterprise marketing and educational site. It contains no connection to the operational HR software or company records.
 
@@ -36,8 +36,12 @@ The demo company is Northstar Studio; all people and birthdates are fictional. T
 
 Screenshot filenames: `team-timeline.jpg`, `monthly-review.jpg`, `person-report.jpg`, `workspace.jpg`.
 
-## Company-focused presentation
+## Clear homepage and demo
 
-The homepage presents the individual, working relationship and company view before the personal demonstration. Its language is an informed conversation with company leaders; independent sources and methodology details remain in the dedicated research centre. The compact anatomical controls open on request, and a pause control stays visible. The first page interactions load in one deferred bundle; the expensive viewer remains lazy.
+The homepage is now a focused five-section Staff Profiler presentation: customer benefit, working-relationship problem, two-person example, three product-grounded reasons, and closing invitation. Its three “See the demo” actions all lead to `/explorer/`. It uses authentic workspace/report screenshots with fictional-data captions and no JavaScript. The new presentation is in `content/marketing.mjs` and `home.css`.
 
-The homepage sound-to-meaning experience has three views: an actual fictional audio sample with point selection, 1–8× visual zoom and measured spectral-power bands; a conceptual sound/memory/meaning/response network; and a separate canonical first/last-name model timeline. Recorded seconds are never converted into model years. Playback pauses on view changes, when the section leaves view, and on page exit. Reproduce `assets/anatomy/spoken-analysis.json` with `python scripts/prepare-sound-analysis.py` (Python 3 standard library only). See `docs/qa/sound-experience-verification.md` for the transcript interpretation and checks.
+The existing `/explorer/` route now starts with the canonical fictional two-person comparison, showing 69.5% and 71.2% immediately. Two-profile entry and the original individual age-or-birthday preview are optional disclosures. `demo.js` bundles the existing comparison/personal UI; `demo.css` supplies its light presentation. No operational application, engine calculations or reports were changed.
+
+The previous brain and science experiences remain on supporting pages; they are no longer part of the homepage. Main navigation on supporting pages is reduced to Product, How it works and The demo. The new workflow page describes use rather than calculation mechanics.
+
+See `docs/qa/simple-homepage-verification.md` for current scope and evidence. The build and 26 tests pass; functional DOM checks pass. Actual desktop/mobile visual review remains unverified because local browser use was disabled in Work settings during this change.

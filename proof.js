@@ -29,7 +29,7 @@ form.addEventListener('submit',event=>{
   try{
     const comparison=comparePair(profile('a'),profile('b'));
     byId('direction-results').append(directionCard(comparison.names.a,comparison.names.b,comparison.forward,'A'),directionCard(comparison.names.b,comparison.names.a,comparison.reverse,'B'));
-    result.hidden=false;result.focus({preventScroll:true});result.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});
+    result.hidden=false;if(form.dataset.initialPreview!=='true'){result.focus({preventScroll:true});result.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});}
   }catch(err){error.textContent=err instanceof ProfileInputError?err.message:'The comparison could not be calculated. Please check both profiles and try again.';error.hidden=false;if(err instanceof ProfileInputError){const field=byId(err.field);field.setAttribute('aria-invalid','true');field.setAttribute('aria-errormessage','pair-error');field.focus();}}
 });
 byId('load-example').addEventListener('click',()=>{
