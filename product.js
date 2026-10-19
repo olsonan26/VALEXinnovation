@@ -1,36 +1,36 @@
 if(document.getElementById('product-panel')){
 const views = {
   timeline: {
-    image:'/assets/screenshots/team-timeline.jpg', screen:'Your team, in perspective', kicker:'01 / THE BIGGER PICTURE',
-    title:'See beyond<br>the org chart.', demoTitle:'Your people. The bigger picture.',
-    copy:'Bring your team into one view. Explore relationships and individual context without losing sight of the people behind the business.',
-    points:['A shared view for managers and HR','Team relationships alongside individual context','A starting point for your next people review'],
+    image:'/assets/screenshots/team-timeline.jpg', screen:'Team overview', kicker:'Review your team',
+    title:'Prepare for your<br>next people review.', demoTitle:'See the team, then open a person’s report.',
+    copy:'View the team’s timelines together, then open an individual report or comparison. Use those views to choose the people and questions to focus on during a review.',
+    points:['A shared view for managers and HR','Individual reports and comparisons accessible from the team view','A starting point for your next people review'],
     alt:'Actual software dashboard showing a company overview, individual timelines and team comparisons. Fictional demo company.',
-    prompt:'Bring more context to the decisions you make about your people.'
+    prompt:'Before a team review, decide which reports to read and which questions to ask.'
   },
   monthly: {
-    image:'/assets/screenshots/monthly-review.jpg', screen:'People & support', kicker:'02 / PEOPLE WORTH INVESTING IN',
-    title:'Keep the person<br>in the picture.', demoTitle:'Make room for a better check-in.',
+    image:'/assets/screenshots/monthly-review.jpg', screen:'Monthly review', kicker:'Prepare a staff check-in',
+    title:'Make time for<br>the individual.', demoTitle:'Make room for a better check-in.',
     copy:'A busy workplace can leave little space for individual attention. The people review helps you prepare a focused conversation and explore where support may be useful.',
-    points:['A review focused on a person and a month','Individual context behind the company overview','A place to begin support and development discussions'],
+    points:['A review focused on a person and a month','Open a person’s report from the monthly review','A place to begin support and development discussions'],
     alt:'Actual monthly people review with individual rows, a selected month and report links. Fictional demo company.',
-    prompt:'Give managers another starting point for conversations about support, recognition and growth.'
+    prompt:'Use the report to prepare questions about support, recognition and development.'
   },
   report: {
-    image:'/assets/screenshots/person-report.jpg', screen:'Individual insight', kicker:'03 / THE PERSON BEHIND THE ROLE',
+    image:'/assets/screenshots/person-report.jpg', screen:'Individual reports', kicker:'Prepare questions for one person',
     title:'The job title<br>is just the start.', demoTitle:'See the individual behind the role.',
-    copy:'Explore individual reports and bring more context to coaching and working relationships. Invite the person to share what fits their experience and what they would describe differently.',
-    points:['Individual reports to explore with your people','More context for coaching and collaboration','Printable views for a focused discussion'],
+    copy:'Read the individual report before a check-in or coaching session. Choose a few points to discuss and ask the person what fits their experience and what they would describe differently.',
+    points:['Individual reports to explore with your people','Questions to discuss in coaching and staff check-ins','Printable views for a focused discussion'],
     alt:'Actual individual report with descriptive sections. Fictional demo person.',
     prompt:'Build a conversation around the person, not just their position in the company.'
   },
   workspace: {
-    image:'/assets/screenshots/workspace.jpg', screen:'Hiring & teams', kicker:'04 / THE TEAM YOU ARE BUILDING',
-    title:'Your next hire.<br>Your whole team.', demoTitle:'Bring hiring into the company picture.',
+    image:'/assets/screenshots/workspace.jpg', screen:'Applicants & jobs', kicker:'Prepare interviews and onboarding',
+    title:'Your next hire.<br>Your whole team.', demoTitle:'Keep applicants, jobs and staff in one place.',
     copy:'Keep staff, applicants and jobs organised in a company workspace. Consider working relationships as you prepare interviews and plan a new colleague’s first weeks.',
-    points:['Staff, applicants and jobs in one workspace','Team context alongside applicant discussions','A clearer starting point for onboarding plans'],
+    points:['Staff, applicants and jobs in one workspace','Profile comparisons to discuss alongside skills and experience','A clearer starting point for onboarding plans'],
     alt:'Actual company workspace showing staff, applicant and job views. Fictional company records.',
-    prompt:'Add team context to skills, experience and the requirements of the role.'
+    prompt:'Use a profile comparison to prepare interview questions alongside the CV and role requirements.'
   }
 };
 const order=Object.keys(views);
@@ -70,7 +70,7 @@ function updateDemo(){
   byId('demo-image').src=view.image;byId('demo-image').alt=view.alt;
   byId('demo-prompt').textContent=view.prompt;fillList(byId('demo-points'),view.points);
   byId('demo-back').disabled=demoIndex===0;
-  byId('demo-next').innerHTML=demoIndex===order.length-1?'Try your connection <span aria-hidden="true">↗</span>':'Next view <span aria-hidden="true">→</span>';
+  byId('demo-next').innerHTML=demoIndex===order.length-1?'Compare two profiles <span aria-hidden="true">↗</span>':'Next view <span aria-hidden="true">→</span>';
   for(const dot of document.querySelectorAll('[data-demo-step]')){if(Number(dot.dataset.demoStep)===demoIndex)dot.setAttribute('aria-current','step');else dot.removeAttribute('aria-current');}
   demo.scrollTop=0;
 }

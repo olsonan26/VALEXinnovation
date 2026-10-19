@@ -11,11 +11,11 @@ function directionCard(from,to,values,letter){
   const article=document.createElement('article');article.className='direction-card';
   const header=document.createElement('div');header.className='direction-heading';
   const avatar=document.createElement('span');avatar.className='explainer-avatar'+(letter==='B'?' second':'');avatar.textContent=letter;
-  const heading=document.createElement('div');const h4=document.createElement('h4');h4.textContent=from+'’s perspective';const caption=document.createElement('p');caption.textContent='Compared with '+to;heading.append(h4,caption);header.append(avatar,heading);article.append(header);
-  const total=document.createElement('div');total.className='overall-score';const label=document.createElement('span');label.textContent='Connection comparison';const number=document.createElement('strong');number.textContent=percent(values.overall);total.append(label,number);article.append(total);
+  const heading=document.createElement('div');const h4=document.createElement('h4');h4.textContent='Starting with '+from;const caption=document.createElement('p');caption.textContent='Compared with '+to;heading.append(h4,caption);header.append(avatar,heading);article.append(header);
+  const total=document.createElement('div');total.className='overall-score';const label=document.createElement('span');label.textContent='Profile comparison';const number=document.createElement('strong');number.textContent=percent(values.overall);total.append(label,number);article.append(total);
   const track=document.createElement('div');track.className='proof-track connection-score';
   if(values.overall!==null){
-    track.setAttribute('role','meter');track.setAttribute('aria-label',from+' with '+to+': connection comparison');
+    track.setAttribute('role','meter');track.setAttribute('aria-label',from+' with '+to+': profile comparison');
     track.setAttribute('aria-valuemin','0');track.setAttribute('aria-valuemax','100');track.setAttribute('aria-valuenow',String(values.overall));
     const fill=document.createElement('i');fill.style.width=values.overall+'%';track.append(fill);
   }
