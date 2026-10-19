@@ -45,3 +45,13 @@ Main text is enlarged and ordinary rendered HTML text has a 16px minimum, with 1
 - Product tabs and enlarged screenshot dialog were reviewed in the shared light branding. Desktop/mobile screenshots are saved under `docs/qa/`.
 
 The branding/calculated-demo release merged in PR #6 as 7984c2d7034daecaaf39a3f976dcdcd77f468f4a. Vercel reported success and the public site was checked for all seven outcomes, full clip completion, original 69.5% / 71.2% comparison and the matching light product page. The replacement-video deployment is recorded in its pull request after live verification.
+
+## Male and female animation variants
+
+The two female clips are added alongside the two male clips, with originals preserved byte-for-byte. All four are silent H.264, 1916 x 1080 and 10.041667 seconds. Inspected end frames confirm the female green check and red X.
+
+Each fictional record now has an explicit `animation` assignment authored for this demonstration: Amelia, Freya, Grace, Mia and Zoe use female clips; Oliver and Noah use male clips. This is stored fictional presentation data, not an inference of gender from a name. Real personal-entry tools do not infer gender. Any future scan tied to freely entered people should offer an explicit animation preference rather than guessing.
+
+The existing calculation alone still selects green at 50 or above and X below 50. The animation assignment only chooses the matching visual variant; it has no effect on scores. Unit and production DOM checks cover all four combinations, preserving original score fixtures and reset/playback behavior.
+
+The demo also offers an explicit choice labelled simply **Male** / **Female**, under Person being compared. Selecting a fictional person sets its authored default; the visitor can change it. Changing either choice clears prior playback and results. This selection changes only the clip variant, never the comparison result. No name-based gender detection is performed.

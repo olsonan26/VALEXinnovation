@@ -27,21 +27,23 @@ assert.equal(doc.getElementById('fit-result').hidden,true);
 assert.equal(scrolls,0);
 doc.getElementById('find-out').click();
 assert.equal(doc.getElementById('fit-result').hidden,true);
-assert.equal(doc.getElementById('fit-video').getAttribute('src'),'/assets/demo/green-match-scan.mp4');
+assert.equal(doc.getElementById('fit-video').getAttribute('src'),'/assets/demo/female-green-match-scan.mp4');
 doc.getElementById('fit-skip').click();
 assert.equal(doc.getElementById('fit-result').dataset.outcome,'alignment');
 assert.equal(doc.getElementById('fit-result').hidden,false);
+doc.getElementById('fit-male').checked=true;doc.getElementById('fit-male').dispatchEvent(new window.Event('change'));assert.equal(doc.getElementById('fit-reveal').hidden,true);doc.getElementById('find-out').click();assert.equal(doc.getElementById('fit-video').getAttribute('src'),'/assets/demo/green-match-scan.mp4');assert.equal(doc.getElementById('fit-result').dataset.outcome,'alignment');doc.getElementById('fit-skip').click();
 doc.getElementById('fit-another').click();
 assert.equal(doc.getElementById('fit-reveal').hidden,true);
 assert.equal(doc.getElementById('fit-profile').value,'freya');
 doc.getElementById('find-out').click();
 assert.equal(doc.getElementById('fit-result').dataset.outcome,'differences');
 assert.equal(doc.getElementById('fit-result').hidden,true);
-assert.equal(doc.getElementById('fit-video').getAttribute('src'),'/assets/demo/x-no-match-scan.mp4');
+assert.equal(doc.getElementById('fit-video').getAttribute('src'),'/assets/demo/female-x-no-match-scan.mp4');
 doc.getElementById('fit-skip').click();
 assert.equal(doc.getElementById('fit-result').hidden,false);
 assert.ok(!doc.querySelector('[data-fit-experience]').textContent.includes('%'));
-console.log('PASS: calculated outcomes choose the correct supplied green/X clip; next profile clears state; no percentages or mechanics shown.');
+for(const [id,clip] of [['oliver','x-no-match-scan'],['noah','green-match-scan']]){doc.getElementById('fit-profile').value=id;doc.getElementById('fit-profile').dispatchEvent(new window.Event('change'));assert.equal(doc.getElementById('fit-reveal').hidden,true);doc.getElementById('find-out').click();assert.equal(doc.getElementById('fit-video').getAttribute('src'),`/assets/demo/${clip}.mp4`);doc.getElementById('fit-skip').click();}
+console.log('PASS: calculated outcomes and explicit fictional animation assignments select all four clips; profile changes clear state; mechanics stay hidden.');
 
 doc.getElementById('real-comparison').open=true;
 doc.getElementById('load-example').click();
