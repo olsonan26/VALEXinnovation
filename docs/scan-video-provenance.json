@@ -1,13 +1,30 @@
 {
   "received": "2026-10-19",
-  "source": "GREEN  CHECK SCAN VIDEO.mp4",
-  "path": "assets/demo/green-check-scan.mp4",
-  "bytes": 14466176,
-  "sha256": "c29080bdd9eabf875bbc4d885349f787971e5ba27f92638fffc4bfa286a7c851",
-  "width": 1916,
-  "height": 1080,
-  "durationSeconds": 10.041667,
-  "format": "H.264 video with AAC audio in MP4",
-  "adaptation": "Original bytes unchanged. Muted inline presentation; no caption overlays or player controls. CSS edge blending and responsive cropping only.",
-  "missing": "X scan video pending user delivery"
+  "clips": [
+    {
+      "source": "GREEN CHECK MARKS THE PERSON.mp4",
+      "path": "assets/demo/green-match-scan.mp4",
+      "outcome": "alignment",
+      "bytes": 14642002,
+      "sha256": "3a7b9f04b8c61711251f84734bffe8cf364646ffe6b49b072f58f83a31ddfbc6",
+      "width": 1916,
+      "height": 1080,
+      "durationSeconds": 10.041667,
+      "format": "H.264 video in MP4; no audio stream",
+      "adaptation": "Original bytes unchanged. Inline presentation without captions or player controls. CSS edge blending and responsive cropping only."
+    },
+    {
+      "source": "X marks the person.mp4",
+      "path": "assets/demo/x-no-match-scan.mp4",
+      "outcome": "differences",
+      "bytes": 12252841,
+      "sha256": "51045a56b7466ce6ea3b20883a6ff7b4c8162e2097d2a80d6e1c8352450f8333",
+      "width": 1916,
+      "height": 1080,
+      "durationSeconds": 10.041667,
+      "format": "H.264 video in MP4; no audio stream",
+      "adaptation": "Original bytes unchanged. Inline presentation without captions or player controls. CSS edge blending and responsive cropping only."
+    }
+  ],
+  "supersedes": "Earlier GREEN  CHECK SCAN VIDEO.mp4; superseded public copy removed."
 }

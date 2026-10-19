@@ -1,6 +1,6 @@
 # Calculated fictional scan demo and shared branding
 
-19 October 2026. The green-check clip is supplied and connected. The X clip is still pending user delivery.
+19 October 2026. Both replacement green-check and X clips are supplied, inspected and connected.
 
 ## Current experience
 
@@ -12,13 +12,13 @@ Four examples meet the cutoff and three fall below it. These are computed model 
 
 ## Integrated animation
 
-The supplied `GREEN  CHECK SCAN VIDEO.mp4` is copied byte-for-byte to `assets/demo/green-check-scan.mp4`. It is H.264/AAC, 1916 x 1080, 10.041667 seconds. Inspection frames and the source hash are recorded in the repository.
+The supplied `GREEN CHECK MARKS THE PERSON.mp4` and `X marks the person.mp4` are copied byte-for-byte to `assets/demo/green-match-scan.mp4` and `assets/demo/x-no-match-scan.mp4`. Both are silent H.264, 1916 x 1080, 10.041667 seconds. Inspected final frames show the correct green check/red X. Source hashes are recorded in `scan-video-provenance.json`. The superseded public green clip was removed; original downloads remain untouched.
 
-The animation is borderless, full width and softly blended into the white page. It has no native player controls or added caption/text overlays. It loads only after the visitor triggers the reveal; playback is muted, inline and never looping. The next clip will use the same presentation. Descriptive context and result copy remain outside the animation. The native clip has not been altered or passed off as a literal human scan.
+The animation is borderless, full width and softly blended into the white page. It has no native player controls or added caption/text overlays. It loads only after the visitor triggers the reveal; playback is muted, inline and never looping. Both clips use the same presentation. Descriptive context and result copy remain outside the animation. The native clip has not been altered or passed off as a literal human scan.
 
-A small Show result action allows the visitor to finish early. Start scan appears only for reduced-motion preference or blocked playback. Slow loading/errors reveal the correct calculated result. Switching profiles clears prior playback/results. Hidden pages pause playback. The X branch currently shows an explicit static X with a truthful pending-video message; it never plays the green clip.
+A small Show result action allows the visitor to finish early. Start scan appears for reduced-motion preference, blocked playback or resuming a paused scan. Slow loading/errors reveal the correct calculated result. Switching profiles clears prior playback/results. Hidden pages pause playback. The X branch plays the supplied red-X animation. It never plays the green clip. Both results remain hidden until their animation completes or Show result is selected.
 
-When the X clip arrives, inspect it, copy the original under `assets/demo/`, then configure `differences.src` in `assets/demo/scan-videos.json`. Use only the accepted local MP4/WebM path. Do not add caption overlays. Verify playback on both outcomes and mobile before publishing.
+Clip selection is configured in `assets/demo/scan-videos.json`. Only accepted local MP4/WebM paths are allowed; caption overlays are intentionally omitted.
 
 ## Shared visual identity
 
@@ -40,8 +40,8 @@ Main text is enlarged and ordinary rendered HTML text has a 16px minimum, with 1
 - Syntax checks, ten-route production build and 31 tests pass, including pinned engine hashes, directional parity, all seven examples, both threshold boundaries and media-path validation.
 - Production-bundle DOM checks pass: both outcomes/reset, canonical 69.5% / 71.2% real comparison, invalid-input/clear behavior and individual age/birthday preview.
 - Simulated media checks cover completion, Show result, profile changes, reduced motion, blocked playback, error and slow loading. They assert no native controls or caption tracks.
-- Actual green video playback completed in the browser, with the calculated match revealed at 10.041667 seconds. The low-scoring branch showed the static X without requesting the green video.
+- Both replacement clips completed in the local production build browser at 10.041667 seconds: Amelia revealed Good match in this demo after the green clip; Freya revealed Not a match in this demo after the X clip. Native controls are disabled and no text tracks are attached. The X path was also reviewed at 376px CSS client width without overflow.
 - All ten routes were measured at CSS client widths 320, 376, 769 and 1441: white background, Manrope headings, ordinary visible HTML text minimum 16px, no page horizontal overflow. See `qa/calculated-brand-layout-audit.json`.
 - Product tabs and enlarged screenshot dialog were reviewed in the shared light branding. Desktop/mobile screenshots are saved under `docs/qa/`.
 
-Production release confirmation is recorded after the deployment is verified.
+The branding/calculated-demo release merged in PR #6 as 7984c2d7034daecaaf39a3f976dcdcd77f468f4a. Vercel reported success and the public site was checked for all seven outcomes, full clip completion, original 69.5% / 71.2% comparison and the matching light product page. The replacement-video deployment is recorded in its pull request after live verification.

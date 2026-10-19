@@ -42,7 +42,7 @@ The homepage uses the supplied Staffprofiler logo, people illustration and produ
 
 The main demo offers seven fictional people and one fictional manager. Let’s find out calls the unchanged comparison engine at runtime. The manager-perspective directional overall chooses alignment at 50 or above, differences below 50, without rounding. Four examples meet the cutoff; three fall below it. Scores/formulas stay out of the public reveal. These are fictional model examples, not hiring recommendations.
 
-The supplied green-check animation blends into the page without player chrome or added text overlays and starts only after the reveal action. The X video is pending; its branch currently shows a static X and a clear pending notice. Local media is configured in `assets/demo/scan-videos.json`. Original engine calculations, real comparison, age/birthday preview and operational application are preserved. See `docs/scan-video-handoff.md`, `docs/demo-calculation-audit.json` and `docs/scan-video-provenance.json`.
+The supplied green-check animation blends into the page without player chrome or added text overlays and starts only after the reveal action. The supplied X animation plays for below-cutoff results; both outcome clips are inspected originals with no added caption overlays. Local media is configured in `assets/demo/scan-videos.json`. Original engine calculations, real comparison, age/birthday preview and operational application are preserved. See `docs/scan-video-handoff.md`, `docs/demo-calculation-audit.json` and `docs/scan-video-provenance.json`.
 
 Run optional DOM checks after building:
 
