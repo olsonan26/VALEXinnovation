@@ -3,6 +3,9 @@ import './proof.js';
 import './product.js';
 import './science-ui.js';
 import './signal-experience.js';
+import {revealLinkedDetails} from './disclosure-navigation.js';
+const openLinkedReading=()=>revealLinkedDetails(document,location.hash)?.scrollIntoView({behavior:'instant',block:'start'});
+addEventListener('hashchange',openLinkedReading);openLinkedReading();
 const el=id=>document.getElementById(id);
 const menu=document.querySelector('.menu-toggle'),nav=el('main-nav');
 if(menu&&nav){

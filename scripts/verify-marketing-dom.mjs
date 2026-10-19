@@ -3,6 +3,8 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {createRequire} from 'node:module';
+import {renderPage} from '../content/pages.mjs';
+import {revealLinkedDetails} from '../disclosure-navigation.js';
 const require=createRequire(import.meta.url);
 const {JSDOM}=require(require.resolve('jsdom',{paths:[process.argv[2]||process.cwd()]}));
 const home=fs.readFileSync(new URL('../dist/index.html',import.meta.url),'utf8');
@@ -69,6 +71,8 @@ console.log('PASS: invalid names show a field error; Clear removes pair details 
 
 doc.getElementById('personal-example').click();
 assert.equal(doc.getElementById('personal-results').hidden,false);
+assert.equal(doc.getElementById('personal-technical').open,false);
+for(const id of ['name-letters','personal-summary','name-timeline','annual-values'])assert.equal(doc.getElementById(id).closest('details').id,'personal-technical');
 assert.ok(doc.getElementById('personal-result-title').textContent.includes('Amelia Morgan'));
 const birthday=doc.querySelector('[name="timing-mode"][value="birthday"]');
 birthday.checked=true;birthday.dispatchEvent(new window.Event('change',{bubbles:true}));
@@ -80,4 +84,9 @@ assert.equal(doc.getElementById('annual-values').hidden,false);
 doc.getElementById('personal-clear').click();
 assert.equal(doc.getElementById('personal-results').hidden,true);
 console.log('PASS: optional individual preview, age/birthday switching, annual values and clearing.');
+const research=new JSDOM(renderPage('/science/')).window.document;
+for(const id of ['anatomy','biological-clock','historical-cycles']){const disclosure=research.getElementById(id).querySelector('details');assert.equal(disclosure.open,false);revealLinkedDetails(research,'#'+id);assert.equal(disclosure.open,true);}
+assert.equal(research.querySelector('.research-reading').open,false);revealLinkedDetails(research,'#established');assert.equal(research.querySelector('.research-reading').open,true);
+assert.equal(revealLinkedDetails(research,'#%zz'),null);
+console.log('PASS: technical preview values and specialist reading are optional; direct research links open their relevant disclosure.');
 window.close();homepage.window.close();
