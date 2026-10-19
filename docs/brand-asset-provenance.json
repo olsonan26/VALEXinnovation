@@ -1,0 +1,21 @@
+{
+  "received": "2026-10-19",
+  "assets": [
+    {
+      "path": "assets/brand/staff-profiler-logo.png",
+      "source": "staff profiler logo.png",
+      "sha256": "b8b4dea8e79dbe22cc046699896e410a2a473a5614e76af5dc097384a67304dc",
+      "width": 2172,
+      "height": 724,
+      "adaptation": "Unmodified user-supplied PNG; displayed responsively."
+    },
+    {
+      "path": "assets/demo/team-possibilities.png",
+      "source": "people for the staff website!.png",
+      "sha256": "48c705ee06f157b20a0131a6da1729538347bd52b008d797a44e929b9ed308be",
+      "width": 1672,
+      "height": 941,
+      "adaptation": "Unmodified user-supplied PNG; displayed responsively."
+    }
+  ]
+}
