@@ -14,11 +14,13 @@
       "fullName": "Amelia Rose Morgan",
       "calledName": "Amelia Morgan",
       "birthdate": "1990-06-18",
+      "animation": "female",
       "profile": {
         "id": "amelia",
         "fullName": "Amelia Rose Morgan",
         "calledName": "Amelia Morgan",
-        "birthdate": "1990-06-18"
+        "birthdate": "1990-06-18",
+        "animation": "female"
       },
       "score": 60.6923786959818,
       "reverseScore": 60.30407505686125,
@@ -30,11 +32,13 @@
       "fullName": "Freya Josephine Bell",
       "calledName": "Freya Bell",
       "birthdate": "1975-01-12",
+      "animation": "female",
       "profile": {
         "id": "freya",
         "fullName": "Freya Josephine Bell",
         "calledName": "Freya Bell",
-        "birthdate": "1975-01-12"
+        "birthdate": "1975-01-12",
+        "animation": "female"
       },
       "score": 42.05306861258529,
       "reverseScore": 47.60379454131918,
@@ -46,11 +50,13 @@
       "fullName": "Grace Eleanor Parker",
       "calledName": "Grace Parker",
       "birthdate": "1985-10-25",
+      "animation": "female",
       "profile": {
         "id": "grace",
         "fullName": "Grace Eleanor Parker",
         "calledName": "Grace Parker",
-        "birthdate": "1985-10-25"
+        "birthdate": "1985-10-25",
+        "animation": "female"
       },
       "score": 72.48645375284308,
       "reverseScore": 63.65537717968158,
@@ -62,11 +68,13 @@
       "fullName": "Oliver James Lewis",
       "calledName": "Oliver Lewis",
       "birthdate": "1975-01-12",
+      "animation": "male",
       "profile": {
         "id": "oliver",
         "fullName": "Oliver James Lewis",
         "calledName": "Oliver Lewis",
-        "birthdate": "1975-01-12"
+        "birthdate": "1975-01-12",
+        "animation": "male"
       },
       "score": 43.304465504169826,
       "reverseScore": 46.126472706595905,
@@ -78,11 +86,13 @@
       "fullName": "Mia Charlotte Turner",
       "calledName": "Mia Turner",
       "birthdate": "2000-04-12",
+      "animation": "female",
       "profile": {
         "id": "mia",
         "fullName": "Mia Charlotte Turner",
         "calledName": "Mia Turner",
-        "birthdate": "2000-04-12"
+        "birthdate": "2000-04-12",
+        "animation": "female"
       },
       "score": 68.30878127369219,
       "reverseScore": 71.02073161485974,
@@ -94,11 +104,13 @@
       "fullName": "Zoe Alexandra Blake",
       "calledName": "Zoe Blake",
       "birthdate": "1975-01-12",
+      "animation": "female",
       "profile": {
         "id": "zoe",
         "fullName": "Zoe Alexandra Blake",
         "calledName": "Zoe Blake",
-        "birthdate": "1975-01-12"
+        "birthdate": "1975-01-12",
+        "animation": "female"
       },
       "score": 42.25786201667931,
       "reverseScore": 48.137886656557995,
@@ -110,11 +122,13 @@
       "fullName": "Noah Benjamin Foster",
       "calledName": "Noah Foster",
       "birthdate": "2000-04-12",
+      "animation": "male",
       "profile": {
         "id": "noah",
         "fullName": "Noah Benjamin Foster",
         "calledName": "Noah Foster",
-        "birthdate": "2000-04-12"
+        "birthdate": "2000-04-12",
+        "animation": "male"
       },
       "score": 66.99167930250191,
       "reverseScore": 69.3021626231994,

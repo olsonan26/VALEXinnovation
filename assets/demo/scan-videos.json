@@ -1,4 +1,8 @@
 {
   "alignment": {"src": "/assets/demo/green-match-scan.mp4", "captions": null},
-  "differences": {"src": "/assets/demo/x-no-match-scan.mp4", "captions": null}
+  "differences": {"src": "/assets/demo/x-no-match-scan.mp4", "captions": null},
+  "female": {
+    "alignment": {"src": "/assets/demo/female-green-match-scan.mp4", "captions": null},
+    "differences": {"src": "/assets/demo/female-x-no-match-scan.mp4", "captions": null}
+  }
 }

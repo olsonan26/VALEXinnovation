@@ -24,6 +24,32 @@
       "durationSeconds": 10.041667,
       "format": "H.264 video in MP4; no audio stream",
       "adaptation": "Original bytes unchanged. Inline presentation without captions or player controls. CSS edge blending and responsive cropping only."
+    },
+    {
+      "source": "FEMALE CHECK MARKS THE SPOT.mp4",
+      "path": "assets/demo/female-green-match-scan.mp4",
+      "outcome": "alignment",
+      "animation": "female",
+      "bytes": 15233644,
+      "sha256": "0d710249fc8a318f3b16a6eb373c375e841d5f29ea01d5f59e6d561fa8336e50",
+      "width": 1916,
+      "height": 1080,
+      "durationSeconds": 10.041667,
+      "format": "H.264 video in MP4; no audio stream",
+      "adaptation": "Original bytes unchanged. Same inline presentation without caption overlays or player controls."
+    },
+    {
+      "source": "FEMALE X MARKS THE SPOT.mp4",
+      "path": "assets/demo/female-x-no-match-scan.mp4",
+      "outcome": "differences",
+      "animation": "female",
+      "bytes": 13610417,
+      "sha256": "6769b1bf7bed32bc3b3e8a84b4401f4c4f1463e17cfeeae090a199c7f96ba763",
+      "width": 1916,
+      "height": 1080,
+      "durationSeconds": 10.041667,
+      "format": "H.264 video in MP4; no audio stream",
+      "adaptation": "Original bytes unchanged. Same inline presentation without caption overlays or player controls."
     }
   ],
   "supersedes": "Earlier GREEN  CHECK SCAN VIDEO.mp4; superseded public copy removed."

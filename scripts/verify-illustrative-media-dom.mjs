@@ -9,6 +9,7 @@ import {renderPage} from '../content/pages.mjs';
 const require=createRequire(import.meta.url),{JSDOM}=require(require.resolve('jsdom',{paths:[process.argv[2]||process.cwd()]})),{buildSync}=require('esbuild');
 const root=path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const config={alignment:{src:'/assets/demo/alignment.mp4',captions:'/assets/demo/alignment.vtt'},differences:{src:'/assets/demo/differences.mp4',captions:null}};
+config.female={alignment:{src:'/assets/demo/female-alignment.mp4',captions:null},differences:{src:'/assets/demo/female-differences.mp4',captions:null}};
 const source=fs.readFileSync(path.join(root,'illustrative-ui.js'),'utf8').replace("import mediaConfig from './assets/demo/scan-videos.json' with {type:'json'};",`const mediaConfig=${JSON.stringify(config)};`);
 const code=buildSync({stdin:{contents:source,resolveDir:root},bundle:true,format:'iife',write:false,target:'es2022'}).outputFiles[0].text;
 function setup({reduced=false,rejectPlay=false}={}){
@@ -22,7 +23,7 @@ function setup({reduced=false,rejectPlay=false}={}){
  return {dom,window,d,click:id=>d.getElementById(id).click(),plays:()=>plays,pauses:()=>pauses,delay:()=>delay?.()};
 }
 let env=setup();env.click('find-out');
-assert.equal(env.d.getElementById('fit-video').getAttribute('src'),config.alignment.src);
+assert.equal(env.d.getElementById('fit-video').getAttribute('src'),config.female.alignment.src);
 assert.equal(env.d.querySelector('#fit-video track'),null);
 assert.equal(env.d.getElementById('fit-video').controls,false);
 assert.equal(env.plays(),1);assert.equal(env.d.getElementById('fit-result').hidden,true);
@@ -30,7 +31,7 @@ env.d.getElementById('fit-video').dispatchEvent(new env.window.Event('pause'));a
 env.d.getElementById('fit-video').dispatchEvent(new env.window.Event('ended'));
 assert.equal(env.d.getElementById('fit-result').hidden,false);
 env.click('fit-another');assert.equal(env.d.getElementById('fit-video').getAttribute('src'),null);assert.equal(env.d.getElementById('fit-reveal').hidden,true);
-env.click('find-out');assert.equal(env.d.getElementById('fit-video').getAttribute('src'),config.differences.src);
+env.click('find-out');assert.equal(env.d.getElementById('fit-video').getAttribute('src'),config.female.differences.src);
 env.click('fit-skip');assert.equal(env.d.getElementById('fit-result').dataset.outcome,'differences');assert.equal(env.d.getElementById('fit-result').hidden,false);env.dom.window.close();
 console.log('PASS: correct clip without player chrome or caption overlays; results wait for completion or Show result; changing profile clears previous playback.');
 
