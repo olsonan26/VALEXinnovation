@@ -43,3 +43,9 @@ The checklist sketch is reference material and has not been published as a liter
 - Actual supplied-video playback remains pending the two files. No generated/placeholder footage has been passed off as the supplied video.
 
 Asset originals, dimensions and SHA-256 hashes are recorded in `docs/brand-asset-provenance.json`. Screenshots are under `docs/qa/illustrative-*`.
+
+## Production confirmation
+
+PR [#5](https://github.com/olsonan26/VALEXinnovation/pull/5) merged as `567f2d5a22d373841326d30a2cbcd3f82f137d8d`. Vercel reports the [production deployment](https://vercel.com/alex-olsons-projects-43241a84/vale-xinnovation/ExciUp4NYko2ro5hZnsNBXSPde6e) completed successfully.
+
+Browser verification at https://vale-xinnovation.vercel.app/ confirmed the new logo/people opening, the demo destination, both Find Out outcomes, switching/reset and the explicit pending-video status. Live mobile result had equal client/scroll widths (338px in this browser's effective viewport). The separate real comparison still displayed 69.5% and 71.2%. No live browser errors/warnings were observed. `illustrative-live-home.jpg` and `illustrative-live-reveal.jpg` capture the public site. Actual video playback remains pending the two files.
