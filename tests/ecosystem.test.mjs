@@ -5,7 +5,7 @@ import {ecosystemRoutes,renderEcosystemPage} from '../content/ecosystem.mjs';
 import {routes,renderPage} from '../content/pages.mjs';
 
 test('ecosystem routes are part of the existing site build',()=>{
-  assert.equal(ecosystemRoutes.length,10);
+  assert.equal(ecosystemRoutes.length,11);
   for(const route of ecosystemRoutes){
     assert.ok(routes.includes(route),route);
     const html=renderPage(route);
@@ -51,3 +51,5 @@ test('consultation is explicitly a mailto inquiry, not a reservation or charged 
   assert.match(html,/You must choose Send/);
   assert.ok(html.includes('id="eco-consultation"'));
 });
+
+test('certificate sample is marked as non-issued and person attribution removed',()=>{const html=renderPage('/accreditation/certificate-example/');assert.match(html,/SAMPLE · NOT ISSUED/);assert.match(html,/eco-certificate-art/);assert.match(html,/at\.adobe\.com/);assert.match(renderPage('/accreditation/'),/certificate-preview/);for(const route of ecosystemRoutes)assert.doesNotMatch(renderPage(route),/Peter(?: Vaughan)?/);});
