@@ -12,3 +12,8 @@
 @media(max-width:1100px){.sp-brand{width:215px}.sp-product-checks{grid-template-columns:1fr}.sp-hero{gap:30px}}
 @media(max-width:800px){.sp-hero{grid-template-columns:1fr;gap:35px;padding-block:45px 55px}.sp-hero h1{max-width:17ch}.sp-people-hero{max-width:700px}.sp-product-checks{grid-template-columns:1fr 1fr;max-width:500px}.sp-people-hero figcaption{margin-left:0}.sp-hero-copy{max-width:650px}}
 @media(max-width:600px){.sp-brand{width:172px}.sp-footer .sp-brand{width:180px}.sp-header-inner{gap:8px}.sp-header .sp-button{padding-inline:11px;gap:8px}.sp-header .sp-button svg{display:none}.sp-hero{padding-block:35px 40px;gap:25px}.sp-audience{font-size:1rem}.sp-product-checks{font-size:1rem;gap:12px}.sp-people-hero figcaption{font-size:1rem;padding-left:15px}.sp-hero .sp-demo-caption{font-size:1rem}.sp-problem h2{font-size:1.65rem}.sp-actual-checks p{font-size:1rem}.sp-demo-page .sp-brand{width:165px}}
+
+/* Ecosystem navigation links: preserve original header on small screens. */
+.sp-ecosystem-link{font-size:.9rem;text-decoration:none;white-space:nowrap}
+@media(max-width:1250px){.sp-header nav{gap:16px}.sp-ecosystem-link{display:none}}
+.sp-footer-links{flex-wrap:wrap}
