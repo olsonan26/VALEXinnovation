@@ -1,0 +1,179 @@
+
+@font-face{font-family:Manrope;src:url('/assets/fonts/manrope-latin-400-normal.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:Manrope;src:url('/assets/fonts/manrope-latin-600-normal.woff2') format('woff2');font-weight:600 900;font-display:swap}
+@font-face{font-family:"Instrument Serif";src:url('/assets/fonts/instrument-serif-latin-400-normal.woff2') format('woff2');font-weight:400;font-display:swap}
+:root{--forest:#103d30;--forest2:#1c5644;--accent:#bbd5ba;--ink:#163f32;--muted:#53665b;--light:#f3f5ee;--cream:#fafaf6;--line:#d8e2d7;--gold:#dfbd83}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+.eco-body{margin:0;background:var(--cream);color:var(--ink);font:400 16px/1.65 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.eco-body a{color:inherit;text-underline-offset:4px}
+.eco-body button,.eco-body input,.eco-body select,.eco-body textarea{font:inherit}
+.eco-body button{cursor:pointer}
+.eco-body img{max-width:100%;height:auto;display:block}
+.eco-body [hidden]{display:none!important}
+.eco-body :focus-visible{outline:3px solid #5c9478;outline-offset:4px}
+.eco-body h1,.eco-body h2,.eco-body h3,.eco-body p{margin:0}
+.eco-body h1,.eco-body h2,.eco-body h3{line-height:1.14;letter-spacing:-.045em}
+.eco-body h1{font-size:clamp(3.6rem,6vw,6.4rem);font-weight:600}
+.eco-body h2{font-size:clamp(2.35rem,4vw,4.25rem);font-weight:600}
+.eco-body h3{font-size:1.33rem;font-weight:600;letter-spacing:-.025em}
+.eco-body em{font:400 1.03em/1 "Instrument Serif",Georgia,serif;color:#508164}
+.eco-wrap{width:min(1200px,calc(100% - 72px));margin:auto}
+.eco-skip{position:absolute;left:16px;top:-90px;background:white;padding:12px;z-index:200}
+.eco-skip:focus{top:12px}
+.eco-topline{background:var(--forest);color:#dbe8dc;text-align:center;font-size:.68rem;letter-spacing:.25em;padding:9px}
+.eco-topline span{color:#d1ad75;margin:0 13px}
+.eco-header{position:sticky;top:0;z-index:50;background:#fffefaf5;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.eco-header-inner{height:90px;display:flex;align-items:center;gap:20px}
+.eco-logo{display:flex;align-items:center;width:210px;flex:none}
+.eco-logo img{width:100%;max-height:60px;object-fit:contain;object-position:left}
+.eco-nav{display:flex;gap:25px;align-items:center;margin-left:auto}
+.eco-nav a{font-size:.85rem;font-weight:600;text-decoration:none;white-space:nowrap}
+.eco-nav a:hover,.eco-nav a[aria-current]{color:#42785b}
+.eco-header-cta{font-size:.82rem!important;padding:12px 17px!important;min-height:42px!important;margin-left:6px}
+.eco-menu-button,.eco-mobile-menu{display:none}
+.eco-btn{display:inline-flex;align-items:center;justify-content:center;gap:15px;background:var(--forest);color:#fff!important;border:1px solid var(--forest);padding:15px 22px;text-decoration:none;font-weight:600;font-size:.9rem;line-height:1.3;min-height:52px;border-radius:5px;transition:background .2s,transform .2s}
+.eco-btn:hover{background:var(--forest2);transform:translateY(-2px)}
+.eco-btn-outline{color:var(--forest)!important;border:1px solid #9bb5a2;background:transparent}
+.eco-btn-outline:hover{background:#e5efe3}
+.eco-text-link{display:inline-block;margin-top:20px;color:#1b6144!important;font-weight:600;font-size:.9rem;text-decoration:none}
+.eco-text-link:hover{text-decoration:underline}
+.eco-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:27px}
+.eco-eyebrow{text-transform:uppercase;color:#42765a;font-size:.72rem;font-weight:600;letter-spacing:.22em;margin-bottom:22px!important}
+.eco-hero{background:radial-gradient(ellipse at 90% 12%,#e7f0e2,transparent 55%),linear-gradient(145deg,#fdfcf8,#f7f9f2);border-bottom:1px solid var(--line);padding:98px 0}
+.eco-hero-grid{display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:72px}
+.eco-hero h1{max-width:720px}
+.eco-lead{font-size:1.12rem;line-height:1.82;color:var(--muted);max-width:575px;margin-top:28px!important}
+.eco-hero-right{min-width:0}
+.eco-shot{margin:0;border:1px solid #d6e0d3;box-shadow:0 20px 70px #163d3020;background:#fff;padding:9px;border-radius:10px}
+.eco-windowbar{display:flex;justify-content:space-between;gap:15px;font-size:.58rem;letter-spacing:.13em;color:#789185;padding:8px 10px 14px;font-weight:600}
+.eco-windowbar span:first-child{letter-spacing:.3em;color:#b8c8b8}
+.eco-shot img{width:100%;object-fit:cover;aspect-ratio:16/9;border:1px solid #ecf1e9;border-radius:4px}
+.eco-shot figcaption{font-size:.7rem;padding:10px 7px 3px;color:#708477}
+.eco-hero .eco-shot{transform:rotate(1deg)}
+.eco-metric-strip{background:var(--forest);color:white;padding:23px 0}
+.eco-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.eco-metrics>div{display:flex;align-items:center;gap:17px;font-size:.78rem}
+.eco-metrics b{font-size:1.8rem;font-family:"Instrument Serif",serif;color:#d2d9ba;font-weight:400}
+.eco-section{padding:100px 0;border-bottom:1px solid var(--line)}
+.eco-light{background:var(--light)}
+.eco-section-head{max-width:760px;margin-bottom:42px}
+.eco-section-head h2{margin-bottom:22px}
+.eco-section-head>p:last-child{font-size:1.05rem;color:var(--muted);line-height:1.8}
+.eco-grid{display:grid;gap:18px}
+.eco-grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.eco-grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.eco-card{display:flex;flex-direction:column;align-items:start;min-height:290px;padding:33px;border:1px solid #d8e3d6;background:#fff;border-radius:8px}
+.eco-card-icon{font-family:"Instrument Serif",serif;font-size:2.3rem;line-height:1;color:#6a9776;margin-bottom:34px}
+.eco-card h3{margin-bottom:14px}
+.eco-card p{color:var(--muted);font-size:.9rem;line-height:1.85}
+.eco-card .eco-text-link{margin-top:auto;padding-top:20px}
+.eco-split{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:center}
+.eco-steps h3{margin-top:23px;margin-bottom:9px}
+.eco-steps>p:not(.eco-eyebrow){color:var(--muted);font-size:.94rem}
+.eco-steps .eco-btn{margin-top:30px}
+.eco-pricing-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.eco-pricing-mini p{border:1px solid var(--line);background:#fff;padding:26px;border-radius:8px}
+.eco-pricing-mini strong{font-size:1.65rem;display:block;letter-spacing:-.05em}
+.eco-pricing-mini span{color:var(--muted);font-size:.8rem}
+.eco-pricing-mini .eco-btn{align-self:center;justify-self:start}
+.eco-footnote{font-size:.78rem;line-height:1.8;color:#65786a;max-width:920px;margin:25px auto}
+.eco-final{padding:75px 0;background:#e0eadc}
+.eco-final-grid{display:flex;align-items:center;justify-content:space-between;gap:60px}
+.eco-final h2{font-size:clamp(2rem,3.5vw,3.8rem);margin-bottom:14px}
+.eco-final p:last-child{color:#4b6654}
+.eco-final .eco-btn{flex-shrink:0}
+.eco-hero-note{min-height:250px;background:var(--forest);color:#f0f8ef;border-radius:13px;display:flex;flex-direction:column;justify-content:center;padding:55px;box-shadow:0 26px 65px #0d3f3025}
+.eco-hero-note p{font-size:1.35rem;line-height:1.6;margin-top:24px;max-width:420px}
+.eco-badge{font-size:.7rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;padding:10px 14px;border:1px solid #ffffff78;border-radius:30px;align-self:start;color:#d9eecb}
+.eco-assessment-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.75fr);align-items:start;gap:60px}
+.eco-form-shell{background:#fff;border:1px solid #d6e2d3;padding:45px;border-radius:10px;box-shadow:0 15px 60px #1c46330c}
+.eco-form-head h2{font-size:2.4rem;margin-bottom:12px}
+.eco-form-head>p:last-of-type{color:var(--muted);font-size:.92rem}
+.eco-stepper{display:flex;align-items:center;gap:12px;margin:34px 0}
+.eco-stepper span{height:36px;min-width:36px;border:1px solid #c6d5c6;border-radius:50%;display:grid;place-items:center;font-size:.74rem;color:#789082}
+.eco-stepper span.active{background:var(--forest);color:white;border-color:var(--forest)}
+.eco-stepper span.done{background:#d9e8d8;color:#275a41}
+.eco-form-step{padding:0;border:0;min-width:0}
+.eco-form-step legend{font-weight:600;font-size:1.45rem;line-height:1.3;letter-spacing:-.025em;margin-bottom:22px}
+.eco-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+.eco-fields label,.eco-calc-inputs label{display:flex;flex-direction:column;font-weight:600;font-size:.82rem;gap:7px}
+.eco-fields .eco-wide{grid-column:1/-1}
+.eco-fields input,.eco-fields textarea,.eco-fields select,.eco-calc-inputs input{width:100%;min-width:0;color:#173d30;background:#fafcf8;border:1px solid #c5d3c6;padding:13px 14px;min-height:48px;border-radius:5px;outline-color:#41825f;font-weight:400}
+.eco-fields textarea{resize:vertical}
+.eco-choice-list{display:grid;gap:12px}
+.eco-choice-list label{display:flex;gap:13px;padding:17px;border:1px solid #d0dcd0;border-radius:6px;cursor:pointer;align-items:flex-start}
+.eco-choice-list label:has(input:checked){background:#eaf3e7;border-color:#448568}
+.eco-choice-list input{margin-top:5px;accent-color:#276249}
+.eco-choice-list strong{font-size:.94rem;display:block}
+.eco-choice-list small{font-size:.8rem;color:var(--muted);display:block;line-height:1.65;margin-top:4px}
+.eco-muted{color:var(--muted);margin-bottom:20px!important;font-size:.89rem}
+.eco-privacy-card{background:#ebf3e9;border:1px solid #c9d9c8;border-radius:7px;padding:23px;font-size:.91rem;line-height:1.85;color:#315c43}
+.eco-privacy-card ul{padding-left:21px;margin-bottom:0}
+.eco-privacy-card p{margin-top:10px}
+.eco-check{display:flex!important;flex-direction:row!important;align-items:flex-start;gap:12px;cursor:pointer;font-size:.85rem!important;line-height:1.65;margin-top:20px;font-weight:400!important}
+.eco-check input{width:18px;height:18px;min-height:18px;margin-top:3px;flex-shrink:0;accent-color:#276249}
+.eco-form-controls{display:flex;align-items:center;gap:12px;margin-top:27px;border-top:1px solid var(--line);padding-top:23px}
+.eco-form-controls .eco-btn{min-height:46px}
+.eco-reset{border:0;background:transparent;text-decoration:underline;color:#25664d}
+.eco-error{color:#9c2a22;font-size:.85rem;margin-top:12px!important}
+.eco-assessment-aside{padding-top:55px}
+.eco-assessment-aside h2{font-size:clamp(2.1rem,3.3vw,3.2rem);margin-bottom:24px}
+.eco-assessment-aside>p:not(.eco-eyebrow){color:var(--muted);margin-bottom:29px}
+.eco-assessment-aside .eco-shot{margin:30px 0}
+.eco-aside-callout{border-left:3px solid #508a65;padding:17px 20px;background:#e5ede2;margin-top:25px}
+.eco-aside-callout p{color:#617767;font-size:.84rem;margin-top:8px}
+.eco-result{background:#e9f2e6;border:1px solid #c7ddc7;border-radius:8px;padding:23px}
+.eco-result h3{margin-bottom:12px}
+.eco-result p,.eco-result li{font-size:.9rem;line-height:1.8;color:#486655}
+.eco-result ul{padding-left:20px}
+.eco-result-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.eco-result-actions .eco-btn{font-size:.77rem}
+.eco-result pre{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.8;font:400 .85rem/1.7 Manrope,sans-serif}
+.eco-price-hero{background:#163e31;color:white;padding:36px;border-radius:10px}
+.eco-price-hero p+p{border-top:1px solid #ffffff40;margin-top:25px;padding-top:20px}
+.eco-price-hero strong{display:block;font-size:4rem;line-height:1.3}
+.eco-price-hero small{display:block;color:#c6d8c9}
+.eco-calculator{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;padding:35px;border:1px solid #cedccc;background:#fff;border-radius:10px}
+.eco-calc-inputs{display:grid;gap:19px;align-content:start}
+.eco-calc-output{background:var(--forest);border-radius:8px;color:white;padding:37px}
+.eco-calc-output p{color:#d1e2d3;font-size:.85rem}
+.eco-calc-output strong{display:block;font-size:3rem;line-height:1.35;letter-spacing:-.06em}
+.eco-calc-divider{height:1px;background:#ffffff40;margin:28px 0}
+.eco-academy-art{background:#133b2d;border-radius:12px;min-height:385px;padding:43px;position:relative;overflow:hidden;color:#e3ede0;box-shadow:0 24px 70px #133b2d33}
+.eco-academy-art>span{letter-spacing:.25em;font-size:.72rem;color:#a6c4ae}
+.eco-academy-art strong{font:400 clamp(10rem,23vw,18rem)/.96 "Instrument Serif",serif;letter-spacing:-.1em;display:block;color:#d0d6bc;margin-top:8px}
+.eco-academy-art p{font-weight:600;font-size:1.2rem}
+.eco-academy-art small{font-size:.74rem;color:#b8ccbd}
+.eco-academy-bars{display:flex;gap:6px;margin:25px 0}
+.eco-academy-bars i{height:5px;background:#d2d1a9;display:block;flex:1;border-radius:5px}
+.eco-module-list{display:grid;gap:8px}
+.eco-module{display:flex;align-items:center;gap:24px;background:white;border:1px solid var(--line);padding:19px 25px;border-radius:6px}
+.eco-module>span:first-child{font:400 2rem "Instrument Serif",serif;color:#6d9980;min-width:48px}
+.eco-module>div{flex:1}
+.eco-module h3{font-size:1rem;letter-spacing:0;margin-bottom:4px}
+.eco-module p{font-size:.78rem;color:#65786b}
+.eco-status{font-size:.7rem;color:#6c7c6d;background:#eff3ee;border-radius:30px;padding:6px 12px;display:inline-block;white-space:nowrap}
+.eco-module-bottom{margin-top:20px}
+.eco-unit-mark{border:1px solid #c5d5c4;letter-spacing:.15em;padding:7px 12px;font-size:.72rem;font-weight:600;margin-bottom:25px;color:#3f7c59}
+.eco-card .eco-status{margin-bottom:24px}
+.eco-unit-requirement{font-size:.74rem!important;margin-top:auto;padding-top:25px}
+.eco-path{background:var(--forest);padding:30px 25px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;border-radius:9px;color:white}
+.eco-path>div{text-align:center}
+.eco-path b{font:400 4rem/1.2 "Instrument Serif",serif;display:block;color:#c8ddbe}
+.eco-path span{font-size:.78rem;color:#d7e5d7}
+.eco-footer{background:#113c2e;color:#e8f3e8;padding:70px 0 23px}
+.eco-footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:80px}
+.eco-footer-brand{font-size:1.5rem;text-decoration:none;font-weight:600;letter-spacing:-.05em}
+.eco-footer-brand span{font-size:.9rem;color:#a5c3ac}
+.eco-footer-top p{color:#b7cebc;margin-top:20px;max-width:350px;font-size:.87rem}
+.eco-footer-top>div:not(:first-child){display:flex;flex-direction:column;gap:12px}
+.eco-footer-top strong{color:#c5dfc4;font-size:.9rem;margin-bottom:7px}
+.eco-footer-top a:not(.eco-footer-brand){color:#bbcebe;font-size:.84rem;text-decoration:none}
+.eco-footer-top a:hover{text-decoration:underline}
+.eco-footer-bottom{margin-top:65px;padding-top:21px;border-top:1px solid #ffffff30;font-size:.73rem;color:#aac4b0;display:flex;justify-content:space-between;gap:25px}
+@media(max-width:1080px){.eco-header-inner{height:73px}.eco-nav,.eco-header-cta{display:none}.eco-menu-button{display:block;margin-left:auto;background:transparent;border:1px solid #aac1aa;padding:10px 16px;border-radius:4px}.eco-mobile-menu:not([hidden]){display:flex;flex-direction:column;padding:14px 36px 24px;gap:14px;background:white}.eco-mobile-menu a{text-decoration:none;font-weight:600;font-size:.9rem}.eco-hero-grid{gap:32px}.eco-hero{padding:70px 0}.eco-hero h1{font-size:clamp(3rem,5.2vw,5rem)}}
+@media(max-width:760px){.eco-wrap{width:min(100% - 36px,560px)}.eco-body h1{font-size:clamp(3rem,13vw,4rem)}.eco-body h2{font-size:2.4rem}.eco-topline{font-size:.54rem;letter-spacing:.1em}.eco-logo{width:164px}.eco-hero-grid,.eco-split,.eco-assessment-layout,.eco-calculator{grid-template-columns:1fr}.eco-hero{padding:62px 0}.eco-hero-right{margin-top:12px}.eco-lead{font-size:1rem}.eco-section{padding:65px 0}.eco-grid-3,.eco-grid-2,.eco-metrics,.eco-pricing-mini,.eco-footer-top{grid-template-columns:1fr}.eco-metrics{gap:18px}.eco-metric-strip{padding:25px 0}.eco-pricing-mini .eco-btn{justify-self:stretch}.eco-final-grid{flex-direction:column;align-items:flex-start;gap:25px}.eco-final{padding:54px 0}.eco-card{min-height:240px;padding:26px}.eco-form-shell{padding:27px 20px}.eco-fields{grid-template-columns:1fr}.eco-assessment-aside{padding-top:5px}.eco-academy-art strong{font-size:12rem}.eco-module{gap:13px;padding:14px}.eco-module>span:first-child{min-width:30px;font-size:1.5rem}.eco-module .eco-status{font-size:.6rem}.eco-path{grid-template-columns:repeat(2,1fr)}.eco-footer-top{gap:35px}.eco-footer-bottom{display:block}.eco-footer-bottom span{display:block;margin-top:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.eco-btn{transition:none}.eco-btn:hover{transform:none}}
+
+.eco-certificate-figure{margin:0;max-width:1100px}.eco-certificate-art{position:relative;background:#eee7d5;border-radius:12px;overflow:hidden;border:1px solid #c5ac68;padding:12px;box-shadow:0 28px 60px #3b2d151b}.eco-certificate-art img{width:100%;display:block;border-radius:3px;aspect-ratio:1491 / 1055;object-fit:contain;background:linear-gradient(135deg,#f8eed6,#e1ce9e)}.eco-cert-watermark{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-18deg);color:#6f341d;letter-spacing:.1em;font-size:clamp(1.5rem,5vw,4.1rem);font-weight:900;line-height:1.2;text-align:center;text-shadow:0 1px 1px #fff8;pointer-events:none;z-index:2;opacity:.56;width:92%}.eco-certificate-figure figcaption{font-size:.84rem;color:#627363;margin:17px 0 23px;line-height:1.8}@media(max-width:760px){.eco-certificate-art{padding:5px}.eco-cert-watermark{font-size:clamp(.9rem,4.2vw,2rem)}}
