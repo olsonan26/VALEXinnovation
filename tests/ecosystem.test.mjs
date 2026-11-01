@@ -52,4 +52,4 @@ test('consultation is explicitly a mailto inquiry, not a reservation or charged 
   assert.ok(html.includes('id="eco-consultation"'));
 });
 
-test('certificate sample is marked as non-issued and person attribution removed',()=>{const html=renderPage('/accreditation/certificate-example/');assert.match(html,/SAMPLE · NOT ISSUED/);assert.match(html,/eco-certificate-art/);assert.match(html,/at\.adobe\.com/);assert.match(renderPage('/accreditation/'),/certificate-preview/);for(const route of ecosystemRoutes)assert.doesNotMatch(renderPage(route),/Peter(?: Vaughan)?/);});
+test('certificate sample is marked as non-issued and person attribution removed',()=>{const html=renderPage('/accreditation/certificate-example/');assert.match(html,/SAMPLE · NOT ISSUED/);assert.match(html,/eco-certificate-art/);assert.match(html,/assets\/certificates\/lettrology-gold-certificate-example\.jpg/);assert.match(renderPage('/accreditation/'),/certificate-preview/);for(const route of ecosystemRoutes)assert.doesNotMatch(renderPage(route),/Peter(?: Vaughan)?/);});
